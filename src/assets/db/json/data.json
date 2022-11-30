@@ -283,28 +283,12 @@
       "isLoggedin": false
     },
     {
-      "name": "asdas",
-      "username": "dasda",
-      "email": "cesardaviddev@gmail.com",
-      "password": "asdadsd",
+      "name": "asdsad",
+      "username": "asdas",
+      "email": "cesardavidmor@gmail.com",
+      "password": "asdadsa",
       "discountActivated": false,
       "id": 2
-    },
-    {
-      "name": "dasd",
-      "username": "asdda",
-      "email": "cesardavisdsdddev@gmail.com",
-      "password": "sdad",
-      "discountActivated": false,
-      "id": 3
-    },
-    {
-      "name": "asdad",
-      "username": "sadasd",
-      "email": "cesasadsadrdaviddev@gmail.com",
-      "password": "sadda",
-      "discountActivated": false,
-      "id": 4
     }
   ],
   "albums": [
