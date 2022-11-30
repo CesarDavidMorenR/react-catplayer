@@ -6,6 +6,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Packages installed
+
+https://mui.com/
+
+npm install @mui/material @emotion/react @emotion/styled
+
+https://react-hook-form.com/
+
+npm install react-hook-form
+
+https://sweetalert.js.org/guides/
+
+npm install sweetalert --save
+
 ### `npm start`
 
 Runs the app in the development mode.\
