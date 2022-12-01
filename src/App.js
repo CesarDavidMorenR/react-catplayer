@@ -1,13 +1,20 @@
-import React from "react";
-import FetchPlaylists from "./API/FetchPlaylists";
-import FetchPlaylist from "./API/FetchPlaylist";
-const App = () => {
+import "./App.css";
+import AlbumContainer from "./components/AlbumsComponent";
+import ArtistContainer from "./components/ArtistsComponent";
+import PlaylistContainer from "./components/PlaylistComponent";
+import TracksContainer from "./components/TracksComponent";
+import UserContainer from "./components/UserComponent";
+
+function App() {
   return (
-    <div>
-      {/* <FetchPlaylist /> */}
-      <FetchPlaylists />
-    </div>
+    <>
+      {/*  <TracksContainer />
+      <PlaylistContainer />
+      <UserContainer />
+      <ArtistContainer /> */}
+      <AlbumContainer />
+    </>
   );
-};
+}
 
 export default App;
