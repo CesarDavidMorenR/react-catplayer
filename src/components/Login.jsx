@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { fetchUser } from "../API/fetchUser";
+import { fetchUser } from "../API/FetchUser";
 import { LoginReducer } from "../context/LoginReducer";
 
 const Login = () => {
@@ -28,20 +28,19 @@ const Login = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-     users.map((user) => {
-
-      if (user.email === updatedState.email && user.password ===updatedState.password ){
+    users.map((user) => {
+      if (
+        user.email === updatedState.email &&
+        user.password === updatedState.password
+      ) {
         dispatch({ type: "SUCCESS" });
-       }else{
+      } else {
         dispatch({ type: "ERROR" });
-       }
-    })
-  }
+      }
+    });
+  };
 
-
-
-
-    /* const userExist = users.map((user) => {
+  /* const userExist = users.map((user) => {
       if (
         user.email === updatedState.email &&
         user.password === updatedState.password
@@ -77,7 +76,6 @@ const Login = () => {
       ) : (
         <form onSubmit={handleForm}>
           <p style={{ color: "red" }}>{updatedState.error}</p>
-
 
           <input
             value={updatedState.email}

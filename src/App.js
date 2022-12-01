@@ -1,19 +1,24 @@
+import "./App.css";
+import AlbumContainer from "./components/AlbumsComponent";
+import PlaylistContainer from "./components/PlaylistComponent";
+import TracksContainer from "./components/TracksComponent";
+import UserContainer from "./components/UserComponent";
+import Login from "./components/Login";
+import ArtistsContainer from "./components/ArtistsContainer";
+import GenresContainer from "./components/GenresContainer";
 
-import './App.css';
-import Login from './components/Login';
-import ArtistsContainer from './components/ArtistsContainer';
-import GenresContainer from './components/GenresContainer';
-import TracksContainer from './components/TracksContainer';
 function App() {
   return (
     <>
-   {/*  <div>holis</div> */}
-    <Login/>
-    <TracksContainer/>
-    <ArtistsContainer/>
-    <GenresContainer/>
-
+      <Login />
+      <TracksContainer />
+      <ArtistsContainer />
+      <GenresContainer />
+      <UserContainer />
+      <PlaylistContainer />
+      <AlbumContainer />
     </>
   );
-  }
+}
+
 export default App;
