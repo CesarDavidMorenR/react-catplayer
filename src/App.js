@@ -1,12 +1,18 @@
 
 import './App.css';
-import Login from './components/Login';
-
+/* 
+import ArtistsContainer from './components/ArtistsContainer';
+import GenresContainer from './components/GenresContainer';
+import TracksContainer from './components/TracksContainer'; */
+import LoginPage from './pages/LoginPage';
 function App() {
   return (
     <>
-   {/*  <div>holis</div> */}
-    <Login/>
+<LoginPage/>
+    {/* <TracksContainer/>
+    <ArtistsContainer/>
+    <GenresContainer/> */}
+
     </>
   );
   }

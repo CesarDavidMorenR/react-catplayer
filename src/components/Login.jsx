@@ -39,28 +39,6 @@ const Login = () => {
   }
 
 
-
-
-    /* const userExist = users.map((user) => {
-      if (
-        user.email === updatedState.email &&
-        user.password === updatedState.password
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    if (userExist.includes(true)) {
-      Login(updatedState.email && updatedState.password);
-      dispatch({ type: "SUCCESS" });
-      console.log("successfully");
-    } else {
-      dispatch({ type: "ERROR" });
-      console.log("unsuccessful");
-    }
-  };
- */
   return (
     <>
       {updatedState.isLoggedin ? (
