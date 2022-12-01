@@ -5,8 +5,7 @@ import GenresContainer from './components/GenresContainer';
 import TracksContainer from './components/TracksContainer';
 import "./App.css";
 import LoginPage from "./components/LoginPage/LoginPage";
-  import { BrowserRouter, Routes, Route} from "react-router-dom";
-<<<<<<< HEAD
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 // import LoginPage from "./components/LoginPage/LoginPage";
 
@@ -19,9 +18,12 @@ function App() {
           {/* <Route path="/" element={<PublicRoute />}> */}
             <Route index element={<LoginPage />} />
           <Route path="/login" element={< Login />} />
-              <TracksContainer/>
-    <ArtistsContainer/>
-    <GenresContainer/>
+          <Route path="/a" element={<  TracksContainer />} />
+          <Route path="/b" element={<ArtistsContainer/>} />
+           <Route path="/c" element={ <GenresContainer/>} />
+             
+    
+   
             {/*<Route path="/favs" element={<FavsPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
             <Route path="*" element={<ErrorPage />} /> */}
