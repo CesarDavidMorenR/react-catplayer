@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { fetchUser } from "../API/fetchUser";
+import { FetchUser } from "../API/FetchUser";
 import { LoginReducer } from "../context/LoginReducer";
 import swal from "sweetalert";
 
@@ -9,7 +9,7 @@ const Login = () => {
 
   useEffect(() => {
     const connection = async () => {
-      const result = await fetchUser(urlUser);
+      const result = await FetchUser(urlUser);
       setUsers(result);
       // console.log(result);
     };
@@ -21,7 +21,7 @@ const Login = () => {
 
   useEffect(() => {
     const connection = async () => {
-      const result = await fetchUser(urlAlbum);
+      const result = await FetchUser(urlAlbum);
       setAlbus(result);
       console.log(result);
     };
@@ -88,6 +88,8 @@ const Login = () => {
       }
     });
   };
+
+
 
   /* const userExist = users.map((user) => {
       if (
