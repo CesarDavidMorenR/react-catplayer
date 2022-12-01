@@ -1,3 +1,4 @@
+
 export const fetchUser = async(urlUser) =>{
     try{
         const response = await fetch(urlUser)
@@ -7,4 +8,5 @@ export const fetchUser = async(urlUser) =>{
         console.log('something wrong')
     }
 }
+
 
