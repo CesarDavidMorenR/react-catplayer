@@ -7,7 +7,7 @@ import TracksContainer from './components/TracksContainer';
 function App() {
   return (
     <>
-   {/*  <div>holis</div> */}
+
     <Login/>
     <TracksContainer/>
     <ArtistsContainer/>
