@@ -1,8 +1,13 @@
 
 import Login from './components/Login';
+import ArtistsContainer from './components/ArtistsContainer';
+import GenresContainer from './components/GenresContainer';
+import TracksContainer from './components/TracksContainer';
 import "./App.css";
 import LoginPage from "./components/LoginPage/LoginPage";
   import { BrowserRouter, Routes, Route} from "react-router-dom";
+<<<<<<< HEAD
+
 // import LoginPage from "./components/LoginPage/LoginPage";
 
 function App() {
@@ -13,7 +18,10 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<PublicRoute />}> */}
             <Route index element={<LoginPage />} />
-             <Route path="/login" element={< Login />} />
+          <Route path="/login" element={< Login />} />
+              <TracksContainer/>
+    <ArtistsContainer/>
+    <GenresContainer/>
             {/*<Route path="/favs" element={<FavsPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
             <Route path="*" element={<ErrorPage />} /> */}
@@ -28,6 +36,7 @@ function App() {
           </Route> */}
         </Routes>
       </BrowserRouter>
+
 
     </>
   );
