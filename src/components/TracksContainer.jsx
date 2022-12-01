@@ -4,13 +4,13 @@ import {fetchUser} from '../API/FetchUser';
 const TracksContainer = () => {
 
     const [tracks,setTracks] = useState([]);
-    const url = "http://localhost:3001/tracks"
+    const url = "http://localhost:8000/tracks"
 
     useEffect(() => {
         const tracks = async () => {
             const data = await fetchUser(url); 
             setTracks(data);
-            console.log(data);
+           
 
         }
         tracks();
