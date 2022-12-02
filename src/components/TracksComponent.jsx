@@ -19,7 +19,7 @@ const TracksContainer = () => {
         {tracks.map((track) => (
           <div key={track.id}>
             <img src={track.thumbnail} alt={track.name} />  
-            <source src={track.url} alt={track.name} />  // TODO ES UN AUDIO
+            <source src={track.url} alt={track.name} />  
             <div>
               <p>{track.name}</p>
               <p>{track.artist}</p>

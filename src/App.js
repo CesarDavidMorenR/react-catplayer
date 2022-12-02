@@ -6,6 +6,7 @@ import UserContainer from "./components/UserComponent";
 import Login from "./components/Login";
 import ArtistsContainer from "./components/ArtistsContainer";
 import GenresContainer from "./components/GenresContainer";
+import ButtonGenre from "./components/ButtonGenre";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <UserContainer />
       <PlaylistContainer />
       <AlbumContainer />
+      <ButtonGenre />
     </>
   );
 }
