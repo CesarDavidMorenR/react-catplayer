@@ -6,7 +6,7 @@ import UserContainer from "./components/UserComponent";
 import Login from "./components/Login";
 import ArtistsContainer from "./components/ArtistsContainer";
 import GenresContainer from "./components/GenresContainer";
-import ButtonGenre from "./components/ButtonGenre";
+import ButtonGenre from "./components/ButtonGenre/ButtonGenre";
 
 
 import LoginPage from "./components/LoginPage/LoginPage";
@@ -29,7 +29,7 @@ function App() {
           <Route path="/d" element={<UserContainer />} />
           <Route path="/e" element={<PlaylistContainer />} />
           <Route path="/f" element={<AlbumContainer />} />
-          <Route path="/b" element={<ButtonGenre />} />
+          <Route path="/g" element={<ButtonGenre />} />
 
           {/*<Route path="/favs" element={<FavsPage />} />
             <Route path="/product/:title" element={<ProductPage />} />

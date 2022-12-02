@@ -21,6 +21,12 @@ https://sweetalert.js.org/guides/
 
 npm install sweetalert --save
 
+typeface-roboto
+The CSS and web font files to easily self-host “Roboto”.
+
+Install
+npm install --save typeface-roboto
+
 ### `npm start`
 
 Runs the app in the development mode.\
