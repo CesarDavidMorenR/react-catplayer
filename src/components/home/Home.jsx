@@ -14,7 +14,6 @@ const Home = () => {
     const playlists = async () => {
       const data = await fetchMusic(url);
       setPlaylist(data);
-      console.log(data);
     };
     playlists();
   }, [url]);
@@ -28,7 +27,6 @@ const Home = () => {
     const connection = async () => {
       const data = await fetchMusic(urlAlbums);
       setAlbums(data);
-      /* console.log(data); */
     };
     connection();
   }, [urlAlbums]);
