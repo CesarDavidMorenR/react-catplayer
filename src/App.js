@@ -7,6 +7,8 @@ import Login from "./components/Login";
 import ArtistsContainer from "./components/ArtistsContainer";
 import GenresContainer from "./components/GenresContainer";
 
+import Carusel from "./components/Carusel/Carusel";
+
 
 import LoginPage from "./components/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -30,6 +32,7 @@ function App() {
           <Route path="/playlist" element={<PlaylistContainer />} />
           <Route path="/f" element={<AlbumContainer />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/ca" element={ <Carusel />} />
 
           {/*<Route path="/favs" element={<FavsPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
