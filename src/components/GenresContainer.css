@@ -1,0 +1,5 @@
+.button__genres {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

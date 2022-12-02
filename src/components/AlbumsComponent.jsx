@@ -9,7 +9,6 @@ const AlbumContainer = () => {
     const connection = async () => {
       const data = await fetchMusic(url);
       setAlbums(data);
-      /* console.log(data); */
     };
     connection();
   }, [url]);
