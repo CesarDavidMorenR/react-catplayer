@@ -4,7 +4,7 @@ const ButtonGenre = () => {
   return (
     <>
     <div>
-    <h2>Música por Genero</h2>
+    <h2>Música por Género</h2>
     </div>
      <div className="buttons d-flex mb-5 pb-5">
           <button className="btn btn-outline-dark me-2">Pop</button>

@@ -1,5 +1,5 @@
 
-export const fetchUser = async (url) => {
+export const FetchUser = async (url) => {
   try {
     const response = await fetch(url);
     console.log("conexion exitosa");
