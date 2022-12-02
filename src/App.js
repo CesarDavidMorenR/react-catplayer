@@ -27,7 +27,7 @@ function App() {
           <Route path="/c" element={<GenresContainer />} />
 
           <Route path="/d" element={<UserContainer />} />
-          <Route path="/e" element={<PlaylistContainer />} />
+          <Route path="/playlist" element={<PlaylistContainer />} />
           <Route path="/f" element={<AlbumContainer />} />
           <Route path="/home" element={<Home />} />
 

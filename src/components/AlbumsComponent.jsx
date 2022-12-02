@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchMusic } from "../API/FetchMusic";
+import { fetchMusic } from "../API/fetchMusic";
 
 const AlbumContainer = () => {
   const [albums, setAlbums] = useState([]);
