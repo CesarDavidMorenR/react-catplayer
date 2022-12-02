@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
 import { Link } from "react-router-dom";
-
 import { fetchMusic } from "../../API/fetchMusic";
+import "./Home.css";
+
 
 const Home = () => {
-
-
-//Playlist Fetch
+  //Playlist Fetch
 
   const [playlists, setPlaylist] = useState([]);
   const url = "http://localhost:8000/playlists";
@@ -21,10 +19,8 @@ const Home = () => {
     playlists();
   }, [url]);
 
+  // Albums Fetch
 
-
-// Albums Fetch
-  
   const [albums, setAlbums] = useState([]);
   const urlAlbums = "http://localhost:8000/albums";
 
@@ -48,22 +44,26 @@ const Home = () => {
           </Link>
         </button>
 
-        {playlists
-          .filter((item, playlists) => playlists < 3)
-          .map((playlist) => (
-            <div key={playlist.id}>
-              <Link className="nav-link" to={"/playlist"}>
-                <img src={playlist.thumbnail} alt={playlist.name} />
-              </Link>
+        <div className="img-responsive">
+          {playlists
+            .filter((item, playlists) => playlists < 3)
+            .map((playlist) => (
+              <div key={playlist.id}>
+                <Link className="nav-link" to={"/playlist"}>
+                  <img src={playlist.thumbnail} alt={playlist.name} />
+                </Link>
 
-              <div>
-                <h2>{playlist.name}</h2>
-                <p>{playlist.isFollowed}</p>
-                <p>{playlist.publicAccessible}</p>
-                <p>{playlist.primaryColor}</p>
+                <div>
+                  <h2>{playlist.name}</h2>
+                  <p>{playlist.isFollowed}</p>
+                  <p>{playlist.publicAccessible}</p>
+                  <p>{playlist.primaryColor}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
+
+
 
         {albums[0]
           ?.filter((item, playlists) => playlists < 3)
