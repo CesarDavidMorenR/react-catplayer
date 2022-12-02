@@ -10,6 +10,7 @@ import GenresContainer from "./components/GenresContainer";
 
 import LoginPage from "./components/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home";
 
 // import LoginPage from "./components/LoginPage/LoginPage";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/d" element={<UserContainer />} />
           <Route path="/e" element={<PlaylistContainer />} />
           <Route path="/f" element={<AlbumContainer />} />
+          <Route path="/home" element={<Home />} />
 
           {/*<Route path="/favs" element={<FavsPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
