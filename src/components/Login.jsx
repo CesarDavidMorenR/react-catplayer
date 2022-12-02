@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { fetchUser } from "../API/FetchUser";
+import { fetchUser } from "../API/fetchUser";
 import { LoginReducer } from "../context/LoginReducer";
 
 const Login = () => {
