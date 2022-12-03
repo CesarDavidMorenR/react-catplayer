@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { fetchMusic } from "../API/FetchMusic";
+import { fetchMusic } from "../../API/FetchMusic";
+
+
+
+
+
 
 const TracksContainer = () => {
+ 
+
+
+
+
+
+
   const [tracks, setTracks] = useState([]);
   const url = "http://localhost:8000/tracks";
 

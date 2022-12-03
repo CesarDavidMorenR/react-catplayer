@@ -1,19 +1,12 @@
+import "./App.css";
+import Homepage from "./pages/Homepage";
 
-import './App.css';
-import Login from './components/Login';
-import ArtistsContainer from './components/ArtistsContainer';
-import GenresContainer from './components/GenresContainer';
-import TracksContainer from './components/TracksContainer';
+
 function App() {
   return (
     <>
-
-    <Login/>
-    <TracksContainer/>
-    <ArtistsContainer/>
-    <GenresContainer/>
-
+<Homepage/>
     </>
   );
-  }
+}
 export default App;

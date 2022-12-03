@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { fetchUser } from "../API/fetchUser";
-import { LoginReducer } from "../context/LoginReducer";
+import { fetchUser } from "../../API/fetchUser";
+import { LoginReducer } from "../../context/LoginReducer";
 
 const Login = () => {
   const [users, setUsers] = useState([]);
