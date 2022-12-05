@@ -10,6 +10,7 @@ const ArtistsContainer = () => {
   var settings = {
     dots: true,
     infinite: false,
+    focusOnSelect:true,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 4,
