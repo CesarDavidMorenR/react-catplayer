@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className="gridHome">
         <h1>Hi, USUARIO(CAMBIAR POR VARIABLE)</h1>
         <button>Albums</button>
         <button>
@@ -70,7 +70,7 @@ const Home = () => {
         {albums[0]
           ?.filter((item, playlists) => playlists < 3)
           .map((album) => (
-            <div key={album.id}>
+            <div className="album-grid" key={album.id}>
               <img src={album.imageUrl} alt="" />
               <h2>{album.name}</h2>
               <p>{album.artist}</p>
