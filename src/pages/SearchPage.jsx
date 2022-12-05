@@ -1,8 +1,11 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
 
 const SearchPage = () => {
   return (
-    <h1>SearchPage</h1>
+  <>
+  <Footer/>
+  </>
   )
 }
 

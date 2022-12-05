@@ -69,6 +69,7 @@ const PlaylistContainer = () => {
   }, [url]);
   return (
     <>
+    <h1>playlist</h1>
       <Slider className="status__slider" {...settings}>
         {playlists.map((playlist) => (
           <div key={playlist.id} className="status">

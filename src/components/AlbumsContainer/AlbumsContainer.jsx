@@ -67,6 +67,7 @@ const AlbumContainer = () => {
   }, [url]);
   return (
     <>
+    <h1>albums</h1>
     <Slider className="status__slider" {...settings}>
       {albums[0]?.map((album) => (
         <div key={album.id} className="status">

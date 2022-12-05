@@ -1,9 +1,9 @@
 import React from 'react'
 import AlbumContainer from '../components/AlbumsContainer/AlbumsContainer'
 import ArtistsContainer from '../components/ArtistContainer/ArtistsContainer'
+import GenresContainer from '../components/GenresContainer/GenresContainer'
 import PlaylistContainer from '../components/PlaylistContainer/PlaylistContainer'
-
-
+import Footer from './../components/Footer/Footer'
 const Homepage = () => {
   return (
     <>
@@ -11,6 +11,8 @@ const Homepage = () => {
 <ArtistsContainer/>
 <PlaylistContainer/>
 <AlbumContainer/>
+<GenresContainer/>
+ <Footer/> 
     </>
   )
 }
