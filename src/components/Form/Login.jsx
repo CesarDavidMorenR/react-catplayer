@@ -1,12 +1,7 @@
 import React, { useEffect, useReducer, useState } from "react";
-<<<<<<< HEAD:src/components/Form/Login.jsx
-import { fetchUser } from "../../API/fetchUser";
-import { LoginReducer } from "../../context/LoginReducer";
-=======
-import { FetchUser } from "../API/FetchUser";
+import { FetchUser } from "../../API/fetchUser";
 import { LoginReducer } from "../context/LoginReducer";
 import swal from "sweetalert";
->>>>>>> bernat:src/components/Login.jsx
 
 const Login = () => {
   const [users, setUsers] = useState([]);
@@ -85,40 +80,14 @@ const Login = () => {
       if (user.name === album) {
         console.log(user.id);
         const pass = user.id;
-           swal({
-             title: user.imageUrl,
-
-           });
+        swal({
+          title: user.imageUrl,
+        });
       } else {
       }
     });
   };
 
-
-
-<<<<<<< HEAD:src/components/Form/Login.jsx
-=======
-  /* const userExist = users.map((user) => {
-      if (
-        user.email === updatedState.email &&
-        user.password === updatedState.password
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    if (userExist.includes(true)) {
-      Login(updatedState.email && updatedState.password);
-      dispatch({ type: "SUCCESS" });
-      console.log("successfully");
-    } else {
-      dispatch({ type: "ERROR" });
-      console.log("unsuccessful");
-    }
-  };
- */
->>>>>>> bernat:src/components/Login.jsx
   return (
     <>
       {updatedState.isLoggedin ? (
