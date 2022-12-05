@@ -15,7 +15,6 @@ const GenresContainer = () => {
   }, [url]);
   return (
     <>
-    <h1>generos</h1>
       <div>
         {genres.map((genre) => (
           <div key={genre.id}>
