@@ -9,11 +9,15 @@ const ArtistsContainer = () => {
 
   var settings = {
     dots: true,
-    infinite: false,
-    focusOnSelect:true,
+   centerMode:false,
+    infinite: true,
+    centerPadding:'30px',
+   
+
+    /* focusOnSelect:true, */
     speed: 500,
-    slidesToShow: 7,
-    slidesToScroll: 4,
+   /*  slidesToShow: 7,
+    slidesToScroll: 4, */
     initialSlide: 0,
     responsive: [
       {

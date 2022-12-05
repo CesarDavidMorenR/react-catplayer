@@ -1,18 +1,13 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer.jsx";
+import CatPlayer from "./Router/CatPlayer";
 
-
-import Homepage from "./pages/Homepage";
 
 
 function App() {
   return (
     <>
-<Homepage/>
-<Footer/>
-
+    <CatPlayer/>
     </>
   );
 }
 export default App;
-
