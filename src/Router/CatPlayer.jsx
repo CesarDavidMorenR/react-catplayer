@@ -13,7 +13,7 @@ const CatPlayer = () => {
   return (
    <>
    <Router>
-   <Footer/>
+{/*    <Footer/> */}
 
     <Routes>
         <Route index  element={<Homepage/>}/>

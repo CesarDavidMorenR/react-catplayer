@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchMusic } from "../../API/FetchMusic";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import "./../../assets/style/ArtisComponent.css";
-const ArtistsContainer = () => {
+const AlbumContainer = () => {
+
+
   var settings = {
     dots: true,
     centerMode: false,
@@ -46,34 +48,39 @@ const ArtistsContainer = () => {
     ],
   };
 
-  const [artists, setArtists] = useState([]);
-  const url = "http://localhost:8000/artists";
+
+
+
+
+
+
+  const [albums, setAlbums] = useState([]);
+  const url = "http://localhost:8000/albums";
 
   useEffect(() => {
-    const artists = async () => {
+    const connection = async () => {
       const data = await fetchMusic(url);
-      setArtists(data);
-      console.log(data);
+      setAlbums(data);
+      /* console.log(data); */
     };
-    artists();
+    connection();
   }, [url]);
-
   return (
     <>
-      <Slider className="status__slider" {...settings}>
-        {artists[0]?.map((artist) => (
-          <div key={artist.id} className="status">
-            <div className="status__avatar">
-              <img src={artist.photoUrl} alt={artist.name} />
-            </div>
-            <h1>{artist.popularity}</h1>
-            {/*      <h3>{artist.name}</h3>
-              <h5>{artist.genres}</h5> */}
+    <Slider className="status__slider" {...settings}>
+      {albums[0]?.map((album) => (
+        <div key={album.id} className="status">
+          <div className="status__avatar">
+          <img src={album.imageUrl} alt="" />
           </div>
-        ))}
+          <div>
+          <h2>{album.name}</h2> 
+         <p>{album.artist}</p> 
+         </div>
+        </div>
+      ))}
       </Slider>
     </>
   );
 };
-
-export default ArtistsContainer;
+export default AlbumContainer;

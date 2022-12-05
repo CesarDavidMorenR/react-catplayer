@@ -1,12 +1,11 @@
 
-export const fetchUser = async(urlUser) =>{
-    try{
-        const response = await fetch(urlUser)
-        /* console.log('fetchUser'); */
-        return await response.json()
-    }catch (error){
-        console.log('something wrong')
-    }
-}
-
+export const FetchUser = async (url) => {
+  try {
+    const response = await fetch(url);
+    console.log("conexion exitosa");
+    return await response.json();
+  } catch (error) {
+    console.log("error");
+  }
+};
 

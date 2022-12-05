@@ -6,6 +6,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Packages installed
+
+https://mui.com/
+
+npm install @mui/material @emotion/react @emotion/styled
+
+https://react-hook-form.com/
+
+npm install react-hook-form
+Youtube: Beier Luo
+
+https://sweetalert.js.org/guides/
+
+npm install sweetalert --save
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -70,7 +85,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### `npm ` carousel
+### `npm ` carousel 
+note: tienes que usar --force
 npm i slick-carousel
 npm i react-slick
 npm i react-stately
