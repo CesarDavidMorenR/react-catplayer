@@ -47,13 +47,14 @@ const Home = () => {
             <p>View more</p>
           </Link>
         </button>
-
+        <div className="img-flex">
         {playlists
           .filter((item, playlists) => playlists < 3)
           .map((playlist) => (
-            <div key={playlist.id}>
+            <div className="play-img">
+            <div className="play-list" key={playlist.id}>
               <Link className="nav-link" to={"/playlist"}>
-                <img src={playlist.thumbnail} alt={playlist.name} />
+                <img className="img-playlist" src={playlist.thumbnail} alt={playlist.name} />
               </Link>
 
               <div>
@@ -62,9 +63,10 @@ const Home = () => {
                 <p>{playlist.publicAccessible}</p>
                 <p>{playlist.primaryColor}</p>
               </div>
+              </div>
             </div>
           ))}
-
+          </div>
         {albums[0]
           ?.filter((item, playlists) => playlists < 3)
           .map((album) => (
