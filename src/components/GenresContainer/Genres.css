@@ -1,0 +1,46 @@
+.Btn_container{
+    /* margin-left: 10px;
+  margin-right: 10px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 3px;
+  margin: 10px;
+  
+
+
+}
+.Btn-genre{
+/* 
+ margin-top: 2px;
+  display: inline-block; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+ font-size: 16px;
+ margin: 4px 2px;
+ padding: 10px 10px;
+ border-radius: 6px;
+ font-weight: bold;
+ position: relative;
+ transition: .4s ease-in;
+ z-index: 1;
+
+ /* border: none; */
+ 
+}
+
+.Btn-genre::before,
+.Btn-genre::after{
+    position: absolute;
+    z-index: -1;
+
+}
+.Btn-genre:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad,  0 0 50px #ff96ad,  0 0 200px #ff96ad ;
+}
+h2{
+    margin: 10px;
+}
