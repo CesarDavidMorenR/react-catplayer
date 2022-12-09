@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchMusic } from "../API/fetchMusic";
+import { fetchMusic } from "../API/FetchMusic";
 
 const AlbumContainer = () => {
   const [albums, setAlbums] = useState([]);
@@ -9,7 +9,6 @@ const AlbumContainer = () => {
     const connection = async () => {
       const data = await fetchMusic(url);
       setAlbums(data);
-      /* console.log(data); */
     };
     connection();
   }, [url]);

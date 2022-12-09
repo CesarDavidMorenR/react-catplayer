@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className="gridHome">
         <h1>Hi, USUARIO(CAMBIAR POR VARIABLE)</h1>
         <button>Albums</button>
         <button>
@@ -41,6 +41,7 @@ const Home = () => {
             <p>View more</p>
           </Link>
         </button>
+<<<<<<< HEAD
 
         <div className="img-responsive">
           {playlists
@@ -50,6 +51,17 @@ const Home = () => {
                 <Link className="nav-link" to={"/playlist"}>
                   <img src={playlist.thumbnail} alt={playlist.name} />
                 </Link>
+=======
+        <div className="img-flex">
+        {playlists
+          .filter((item, playlists) => playlists < 3)
+          .map((playlist) => (
+            <div className="play-img">
+            <div className="play-list" key={playlist.id}>
+              <Link className="nav-link" to={"/playlist"}>
+                <img className="img-playlist" src={playlist.thumbnail} alt={playlist.name} />
+              </Link>
+>>>>>>> jackson
 
                 <div>
                   <h2>{playlist.name}</h2>
@@ -58,15 +70,22 @@ const Home = () => {
                   <p>{playlist.primaryColor}</p>
                 </div>
               </div>
+<<<<<<< HEAD
             ))}
         </div>
 
 
 
+=======
+              </div>
+            </div>
+          ))}
+          </div>
+>>>>>>> jackson
         {albums[0]
           ?.filter((item, playlists) => playlists < 3)
           .map((album) => (
-            <div key={album.id}>
+            <div className="album-grid" key={album.id}>
               <img src={album.imageUrl} alt="" />
               <h2>{album.name}</h2>
               <p>{album.artist}</p>

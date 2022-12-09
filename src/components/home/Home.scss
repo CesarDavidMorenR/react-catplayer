@@ -1,4 +1,24 @@
+<<<<<<< HEAD
 .img-responsive {
   display: flex;
 }
 
+=======
+.gridHome{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin: 20px;
+    }
+
+
+.img-flex{
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.album-grid{
+    grid-area: 2 / 1 / 4 / 4;
+}
+>>>>>>> jackson
