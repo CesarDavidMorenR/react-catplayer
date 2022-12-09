@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { fetchMusic } from "./../../Api/fetchMusic";
+import { fetchMusic } from "../../API/FetchMusic";
 import './Genres.css'
 
 
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
   console.log(genres);
-  const url = "http://localhost:5000/genres";
+  const url = "http://localhost:8000/genres";
 
   useEffect(() => {
     const genres = async () => {
@@ -24,7 +24,7 @@ const GenresContainer = () => {
             <div className="Btn_container">
         {genres.map((genre) => (
           <div key={genre.id} >
-             <button className="Btn-genre">{genre.name}</button>
+             <button className="Btn-genre"><p className="GenreName">{genre.name}</p></button>
             </div>
           
         ))}
