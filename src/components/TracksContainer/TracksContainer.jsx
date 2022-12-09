@@ -24,10 +24,13 @@ const TracksContainer = () => {
     };
     tracks();
   }, [url]);
+  /* function getRandom(max) {
+    return Math.floor(Math.random(3) * max);
+  } */
   return (
     <>
       <div>
-        {tracks.map((track) => (
+        {tracks.slice(0,3).map((track) => (
           <div key={track.id}>
             <img src={track.thumbnail} alt={track.name} />
             {/* <img src={track.url} alt={track.name} /> */}

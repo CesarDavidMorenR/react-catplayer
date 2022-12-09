@@ -20,8 +20,6 @@
     "react-slick-carousel": "^0.14.9",
     "react-stately": "^3.19.0",
     "styled-components": "^5.3.6"
-   
-
   },
   "scripts": {
     "start": "react-scripts start",

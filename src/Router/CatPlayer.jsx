@@ -7,6 +7,7 @@ import Homepage from '../pages/Homepage'
 import SearchPage from '../pages/SearchPage'
 import ListPage from './../pages/ListPage'
 import AccountPage from './../pages/AccountPage'
+import TracksPage from '../pages/TracksPage';
 
 
 const CatPlayer = () => {
@@ -18,6 +19,7 @@ const CatPlayer = () => {
         <Route path='/SearchPage' element={<SearchPage/>}/>
         <Route path="/ListPage" element={<ListPage/>}/>
         <Route path='/AccountPage' element={<AccountPage/>} />
+        <Route path='/TracksPage/:id' element={<TracksPage/>} />
 
         
     </Routes>
