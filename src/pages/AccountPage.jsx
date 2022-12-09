@@ -1,12 +1,12 @@
 import React from 'react'
 import Footer from '../components/Footer/Footer'
 
-const LoginPage = () => {
+const AccountPage = () => {
   return (
-    <>
-    <Footer/>
-    </>
+<>
+<Footer/>
+</>
   )
 }
 
-export default LoginPage
+export default AccountPage

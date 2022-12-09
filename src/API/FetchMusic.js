@@ -1,3 +1,4 @@
+
 export const fetchMusic = async (url) => {
   try {
     const response = await fetch(url);

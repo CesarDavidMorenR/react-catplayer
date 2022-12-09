@@ -1,7 +1,8 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { FetchUser } from "../../API/fetchUser";
-import { LoginReducer } from "../context/LoginReducer";
-import swal from "sweetalert";
+
+import { fetchUser } from "../../API/FetchUser";
+import { LoginReducer } from "../../context/LoginReducer";
+
 
 const Login = () => {
   const [users, setUsers] = useState([]);
@@ -9,7 +10,7 @@ const Login = () => {
 
   useEffect(() => {
     const connection = async () => {
-      const result = await FetchUser(urlUser);
+      const result = await fetchUser(urlUser);
       setUsers(result);
       // console.log(result);
     };
@@ -21,7 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     const connection = async () => {
-      const result = await FetchUser(urlAlbum);
+      const result = await fetchUser(urlAlbum);
       setAlbus(result);
       console.log(result);
     };
@@ -87,6 +88,29 @@ const Login = () => {
       }
     });
   };
+
+
+
+  /* const userExist = users.map((user) => {
+      if (
+        user.email === updatedState.email &&
+        user.password === updatedState.password
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    if (userExist.includes(true)) {
+      Login(updatedState.email && updatedState.password);
+      dispatch({ type: "SUCCESS" });
+      console.log("successfully");
+    } else {
+      dispatch({ type: "ERROR" });
+      console.log("unsuccessful");
+    }
+  };
+ */
 
   return (
     <>
