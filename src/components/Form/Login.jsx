@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { FetchUser } from "../API/fetchUser";
+import { FetchUser } from "../../API/FetchUser";
 import { LoginReducer } from "../context/LoginReducer";
 import swal from "sweetalert";
 
@@ -92,7 +92,7 @@ const Login = () => {
     <>
       {updatedState.isLoggedin ? (
         <div>
-          <h1>successfully logged in</h1>
+          <h1>successfully logged in {updatedState.email}</h1>
           <button
             onClick={() => {
               dispatch({ type: "LOGOUT" });
