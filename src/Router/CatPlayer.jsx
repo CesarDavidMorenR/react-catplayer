@@ -7,6 +7,7 @@ import Homepage from '../pages/Homepage'
 import LikeSongs from './../pages/LikeSongs'
 import ListPlaylist from './../pages/ListPlaylist'
 import AccountPage from './../pages/AccountPage'
+import LoginPage from '../pages/LoginPage';
 
 
 const CatPlayer = () => {
@@ -15,7 +16,8 @@ const CatPlayer = () => {
    <BrowserRouter>
 
     <Routes>
-        <Route index  element={<Homepage/>}/>
+        <Route index  element={<LoginPage/>}/>
+        <Route path='/Homepage' element={<Homepage/>}/>
         <Route path='/SearchPage' element={<LikeSongs/>}/>
         <Route path="/ListPlaylist" element={<ListPlaylist/>}/>
         <Route path='/AccountPage' element={<AccountPage/>} />

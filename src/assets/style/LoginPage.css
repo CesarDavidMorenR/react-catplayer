@@ -1,0 +1,21 @@
+.lamp{
+    height: 23rem;
+    width: 12rem;
+    position: relative;
+    background: rgb(36, 154, 97);
+    background: linear-gradient(90deg,
+                                rgba(16,154,97,1)10%,
+                                rgba(56,170,113,1)38%,
+                                rgba(36,154,97,1) 55%);
+             clip-path: polygon(30% 0, 70% 0 ,
+                                100% 65%,70% 100%,
+                                30% 100%, 0 65%);
+    z-index: 20;
+    border-radius: 50%;
+}
+.top-cover,
+.bottom-cover{
+    width: 100%;
+    height: 17.5%;
+    
+}
