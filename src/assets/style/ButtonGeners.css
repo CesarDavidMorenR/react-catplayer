@@ -1,7 +1,4 @@
 
-
-
-  
 .BtnContainer {
   margin-left: 10px;
   margin-right: 10px;
@@ -13,6 +10,7 @@
   font-size: 25px;
   
 }
+
 
 .BtnGenre {
   grid-area: 2 / 1 / 10 / 4;
@@ -55,9 +53,10 @@
   font-size: 27px;
   padding: 19px;
   text-decoration: none;
+
 }
 
-.BtnPop:hover {
+.BtnPop:hover { 
   background: #2079b0;
   background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
   background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);

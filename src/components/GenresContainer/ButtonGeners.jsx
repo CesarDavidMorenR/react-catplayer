@@ -1,6 +1,7 @@
 import React from 'react'
 
-import './../../assets/style/ButtonGeners.css'
+// import './../../assets/style/ButtonGeners.css';
+import './../../assets/style/prueba.css';
 
 const ButtonGeners = () => {
   return (
@@ -26,8 +27,6 @@ const ButtonGeners = () => {
           <button className="BtnPiano">Piano</button>
 </div>
 </div>
-   
-   
    </>
   )
 }
