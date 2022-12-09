@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes,Route, BrowserRouter } from "react-rout
 
 
 import Homepage from '../pages/Homepage'
-import SearchPage from '../pages/SearchPage'
+import LikeSongs from './../pages/LikeSongs'
 import ListPlaylist from './../pages/ListPlaylist'
 import AccountPage from './../pages/AccountPage'
 
@@ -16,7 +16,7 @@ const CatPlayer = () => {
 
     <Routes>
         <Route index  element={<Homepage/>}/>
-        <Route path='/SearchPage' element={<SearchPage/>}/>
+        <Route path='/SearchPage' element={<LikeSongs/>}/>
         <Route path="/ListPlaylist" element={<ListPlaylist/>}/>
         <Route path='/AccountPage' element={<AccountPage/>} />
 

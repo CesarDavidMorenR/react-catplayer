@@ -6,12 +6,14 @@ import ArtistsContainer from "../components/ArtistContainer/ArtistsContainer";
 import ButtonGeners from "../components/GenresContainer/ButtonGeners";
 import Menu from "../components/Menu/Menu";
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
+import Search from "../components/Search/Search";
 /* import Footer from "./../components/Footer/Footer"; */
 const Homepage = () => {
   return (
     <>
    
       <div>
+        <Search/>
         <Menu/>
         <welcomeUser>Welcome user</welcomeUser>
 
@@ -20,7 +22,7 @@ const Homepage = () => {
 
         <ArtistsContainer />
 
-      {/*   <ButtonGeners /> */}
+         <ButtonGeners /> 
         {/*    <Footer /> */}
       </div>
     </>
