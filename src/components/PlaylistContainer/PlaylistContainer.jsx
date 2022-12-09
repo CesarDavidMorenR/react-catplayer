@@ -3,13 +3,16 @@ import { fetchMusic } from "../../API/FetchMusic";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+const PlaylistContainer = () => {
 
-import "./../../assets/style/ArtistComponent.css";
-const ArtistsContainer = () => {
-  const settings = {
+
+  var settings = {
     dots: true,
-    infinite: false,
-    focusOnSelect: true,
+    centerMode: false,
+    infinite: true,
+    centerPadding: "30px",
+
+    /* focusOnSelect:true, */
     speed: 500,
     /*  slidesToShow: 7,
     slidesToScroll: 4, */
@@ -43,34 +46,48 @@ const ArtistsContainer = () => {
     ],
   };
 
-  const [artists, setArtists] = useState([]);
-  const url = "http://localhost:8000/artists";
+
+
+
+
+
+
+
+
+
+
+  const [playlists, setPlaylist] = useState([]);
+  const url = "http://localhost:8000/playlists";
 
   useEffect(() => {
-    const artists = async () => {
+    const playlists = async () => {
       const data = await fetchMusic(url);
-      setArtists(data);
+      setPlaylist(data);
       console.log(data);
     };
-    artists();
+    playlists();
   }, [url]);
-
   return (
     <>
+    <h1>playlist</h1>
       <Slider className="status__slider" {...settings}>
-        {artists[0]?.map((artist) => (
-          <div key={artist.id} className="status">
+        {playlists.map((playlist) => (
+          <div key={playlist.id} className="status">
+
             <div className="status__avatar">
-              <img src={artist.photoUrl} alt={artist.name} />
+            <img src={playlist.thumbnail} alt={playlist.name} />
             </div>
-            <h1>{artist.popularity}</h1>
-            {/*      <h3>{artist.name}</h3>
-              <h5>{artist.genres}</h5> */}
+
+            <div>
+              <h2>{playlist.name}</h2>
+              <p>{playlist.isFollowed}</p>
+              <p>{playlist.publicAccessible}</p>
+           {/*    <p>{playlist.primaryColor}</p> */}
+            </div>
           </div>
         ))}
       </Slider>
     </>
   );
 };
-
-export default ArtistsContainer;
+export default PlaylistContainer;

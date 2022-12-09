@@ -85,7 +85,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### `npm ` carousel
+### `npm ` carousel 
+note: tienes que usar --force
 npm i slick-carousel
 npm i react-slick
 npm i react-stately

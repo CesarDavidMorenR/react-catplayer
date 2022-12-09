@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer/Footer'
 
-const LoginPage = () => {
+const ListPage = () => {
   return (
     <>
     <Footer/>
@@ -9,4 +9,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default ListPage

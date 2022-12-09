@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { fetchMusic } from "../API/FetchMusic";
-import { Button } from "@mui/material";
-import "./GenresContainer.css";
-
 
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
@@ -23,7 +20,7 @@ const GenresContainer = () => {
           <div key={genre.id}>
             <div>
               <div className="button__genres">
-                <Button variant="contained">{genre.name}</Button>
+                <button variant="contained">{genre.name}</button>
               </div>
               <p>{genre.name}</p>
             </div>
