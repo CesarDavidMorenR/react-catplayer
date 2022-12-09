@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import "./../../assets/style/ArtisComponent.css";
+import "./../../assets/style/ArtistComponent.css"; 
 const ArtistsContainer = () => {
   var settings = {
     dots: true,
@@ -60,13 +60,14 @@ const ArtistsContainer = () => {
 
   return (
     <>
+    <h1>Artist</h1>
       <Slider className="status__slider" {...settings}>
         {artists[0]?.map((artist) => (
           <div key={artist.id} className="status">
             <div className="status__avatar">
-              <img src={artist.photoUrl} alt={artist.name} />
+              <img src={artist.photoUrl} alt="" />
             </div>
-            <h1>{artist.popularity}</h1>
+            
             {/*      <h3>{artist.name}</h3>
               <h5>{artist.genres}</h5> */}
           </div>

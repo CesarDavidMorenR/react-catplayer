@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes,Route } from "react-router-dom";import Footer from '../components/Footer/Footer'
+import { BrowserRouter as Router, Routes,Route } from "react-router-dom";/* import Footer from '../components/Footer/Footer' */
 
 
 
@@ -13,8 +13,6 @@ const CatPlayer = () => {
   return (
    <>
    <Router>
-{/*    <Footer/> */}
-
     <Routes>
         <Route index  element={<Homepage/>}/>
         <Route path='/SearchPage' element={<SearchPage/>}/>

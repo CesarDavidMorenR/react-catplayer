@@ -1,9 +1,10 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
 
 const ListPage = () => {
   return (
     <>
-    <h1>ListPage</h1>
+    <Footer/>
     </>
   )
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
 
 const AccountPage = () => {
   return (
-<h1>AccountPage</h1>
+<>
+<Footer/>
+</>
   )
 }
 
