@@ -1,7 +1,7 @@
 import React from 'react'
 import AlbumContainer from '../components/AlbumsContainer/AlbumsContainer'
 import ArtistsContainer from '../components/ArtistContainer/ArtistsContainer'
-import ButtonGeners from '../components/GenresContainer/ButtonGeners'
+import GenresContainer from '../components/GenresContainer/GenresContainer'
 import PlaylistContainer from '../components/PlaylistContainer/PlaylistContainer'
 import TracksContainer from '../components/TracksContainer/TracksContainer'
 import Footer from './../components/Footer/Footer'
@@ -15,7 +15,7 @@ const Homepage = () => {
     <ArtistsContainer/>
 
 
-<ButtonGeners/>
+<GenresContainer/>
  <Footer/> 
     </>
   )
