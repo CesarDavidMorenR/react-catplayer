@@ -90,3 +90,6 @@ note: tienes que usar --force
 npm i slick-carousel
 npm i react-slick
 npm i react-stately
+
+### `npm ` id for register user
+npm i uuid
