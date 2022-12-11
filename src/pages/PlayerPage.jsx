@@ -5,17 +5,15 @@ import "react-h5-audio-player/lib/styles.css";
 
 const PlayerPage = () => {
   const [tracks, setTracks] = useState([]);
-  const url = "http://localhost:8000/tracks";
+  const urlTrack = "http://localhost:8000/tracks";
 
   useEffect(() => {
     const tracks = async () => {
-      const data = await FetchTracks(url);
+      const data = await FetchTracks(urlTrack);
       setTracks(data);
     };
     tracks();
-  }, [url]);
-
-  // const playlist = tracks;
+  }, [urlTrack]);
 
   //   [
   //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3" },
@@ -24,6 +22,11 @@ const PlayerPage = () => {
   // ];
 
   const [currentTrack, setTrackIndex] = useState(0);
+  console.log(currentTrack);
+  // Wasn't working until i put optional chaining operator "?" before url in playlist
+  const playlist = tracks[currentTrack]?.url;
+  console.log(playlist);
+
   const handleClickNext = () => {
     setTrackIndex((currentTrack) =>
       currentTrack < tracks.length - 1 ? currentTrack + 1 : 0
@@ -41,7 +44,7 @@ const PlayerPage = () => {
       <div>
         <AudioPlayer
           autoPlay
-          src={tracks[currentTrack].url}
+          src={playlist}
           onPlay={(e) => console.log("onPlay")}
           // other props here
           showSkipControls={true}
