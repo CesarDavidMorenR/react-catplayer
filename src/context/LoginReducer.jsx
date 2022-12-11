@@ -1,50 +1,42 @@
-
-
-export const LoginReducer = (state,action) =>{
-    
-    switch (action.type) {
-      case "SUCCESS":
-        return {
+export function LoginReducer(state,action){
+    switch(action.type){
+      case"field":{
+        return{
           ...state,
-          isLoggedin: true,
-          email: "",
-          password: "",
+          [action.field]:action.value
         };
-      case "RECOVER":
-        return {
+      }
+      case "login":{
+        return{
           ...state,
-          //   isLoggedin: true,
-          email: action.value,
-            recover: "SDSD",
-          
-        };
-      case "ERROR":
-        return {
+          isLoading:true,
+          error:false
+        }
+      }
+      case "success":{
+        return{
           ...state,
-          error: "WRONG EMAIL OR PASSWORD",
+         isLoggedIn:true,
+         isLoading:false
         };
-      case "LOGOUT":
-        return {
+      }
+      case "error":{
+        return{
           ...state,
-          error: false,
-          isLoggedin: false,
+          error:action.payload,
+          isLoading:false
         };
-      case "EMAIL":
-        return {
+      }
+      case "logout":{
+        return{
           ...state,
-          email: action.value,
+          isLoggedIn:false,
+          username:'',
+          password:''
         };
-      case "PASSWORD":
-        return {
-          ...state,
-          password: action.value,
-        };
-      default:
+      }
+      default:{
         return state;
+      }
     }
-}
-
-
-
-
-
+  }
