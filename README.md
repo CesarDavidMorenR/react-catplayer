@@ -21,6 +21,10 @@ https://sweetalert.js.org/guides/
 
 npm install sweetalert --save
 
+https://www.npmjs.com/package/react-player
+
+npm install react-player --force
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -84,8 +88,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### `npm ` carousel
 
-### `npm ` carousel 
 note: tienes que usar --force
 npm i slick-carousel
 npm i react-slick
