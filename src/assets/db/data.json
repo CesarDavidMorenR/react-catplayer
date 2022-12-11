@@ -271,6 +271,15 @@
       "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644602494/tracks-dev/D_JAY_KOI_-_We_got_the_vibes___Feat_Fil_Straughan__uz9qw7.mp3",
       "genre": "folk",
       "liked": false
+    },
+    {
+      "id": 21,
+      "name": "🌐🙌",
+      "artist": "Secret",
+      "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644602996/tracks-thumbnails-dev/Monday_8am_amfdta.jpg",
+      "url": "https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3",
+      "genre": "Chinese",
+      "liked": false
     }
   ],
   "user": [
@@ -452,10 +461,7 @@
       {
         "id": 1,
         "name": "Kim Cesarion",
-        "genres": [
-          "swedish pop",
-          "swedish soul"
-        ],
+        "genres": ["swedish pop", "swedish soul"],
         "popularity": 38,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5eb842fae710a21f648e26dd910"
       },
@@ -525,9 +531,7 @@
       {
         "id": 7,
         "name": "Rasmus Hultgren",
-        "genres": [
-          "swedish pop rap"
-        ],
+        "genres": ["swedish pop rap"],
         "popularity": 31,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5eb470a02669d59859a21676ed0"
       },
@@ -548,28 +552,21 @@
       {
         "id": 9,
         "name": "Hemliga Klubben",
-        "genres": [
-          "swedish pop"
-        ],
+        "genres": ["swedish pop"],
         "popularity": 34,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5eb014c22b80be73cee9c7835b1"
       },
       {
         "id": 10,
         "name": "Steph K",
-        "genres": [
-          "swedish trap pop"
-        ],
+        "genres": ["swedish trap pop"],
         "popularity": 37,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5ebf913a1de42e743a6f462dfe1"
       },
       {
         "id": 11,
         "name": "Romeo",
-        "genres": [
-          "swedish hip hop",
-          "swedish trap pop"
-        ],
+        "genres": ["swedish hip hop", "swedish trap pop"],
         "popularity": 44,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5eb6dca4eb1f2347310b27c3000"
       },
@@ -618,9 +615,7 @@
       {
         "id": 16,
         "name": "Karim Alger",
-        "genres": [
-          "swedish trap pop"
-        ],
+        "genres": ["swedish trap pop"],
         "popularity": 24,
         "photoUrl": "https://i.scdn.co/image/ab6761610000e5eb5c33b372d2ef6275ed536450"
       },

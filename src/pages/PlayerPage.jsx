@@ -16,7 +16,7 @@ const PlayerPage = () => {
   }, [urlTrack]);
 
   //   [
-  //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3" },
+
   //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3" },
   //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/suipian.mp3" },
   // ];
@@ -33,9 +33,15 @@ const PlayerPage = () => {
     );
   };
 
+    const handleClickPrevious = () => {
+      setTrackIndex((currentTrack) =>
+        currentTrack < tracks.length - 1 ? currentTrack - 1 : 0
+      );
+    };
+
   const handleEnd = () => {
     setTrackIndex((currentTrack) =>
-      currentTrack < tracks.length - 1 ? currentTrack + 1 : 0
+      currentTrack < tracks.length - 1 ? currentTrack + 2 : 0
     );
   };
 
@@ -50,6 +56,7 @@ const PlayerPage = () => {
           showSkipControls={true}
           showJumpControls={true}
           onClickNext={handleClickNext}
+          onClickPrevious={handleClickPrevious}
           onEnded={handleEnd}
         />
       </div>

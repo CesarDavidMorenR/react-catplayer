@@ -21,9 +21,9 @@ https://sweetalert.js.org/guides/
 
 npm install sweetalert --save
 
-https://www.npmjs.com/package/react-player
+https://openbase.com/js/react-h5-audio-player
 
-npm install react-player --force
+npm i react-h5-audio-player --force
 
 ### `npm start`
 
