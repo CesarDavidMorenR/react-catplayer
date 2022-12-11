@@ -3,9 +3,7 @@ import { FetchTracks } from "../API/FetchTracks";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
-
 const PlayerPage = () => {
-
   const [tracks, setTracks] = useState([]);
   const url = "http://localhost:8000/tracks";
 
@@ -17,11 +15,8 @@ const PlayerPage = () => {
     tracks();
   }, [url]);
 
+  // const playlist = tracks;
 
-
-  const playlist = tracks.url;
-    
-    
   //   [
   //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3" },
   //   { src: "https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3" },
@@ -31,13 +26,13 @@ const PlayerPage = () => {
   const [currentTrack, setTrackIndex] = useState(0);
   const handleClickNext = () => {
     setTrackIndex((currentTrack) =>
-      currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+      currentTrack < tracks.length - 1 ? currentTrack + 1 : 0
     );
   };
 
   const handleEnd = () => {
     setTrackIndex((currentTrack) =>
-      currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+      currentTrack < tracks.length - 1 ? currentTrack + 1 : 0
     );
   };
 
@@ -46,7 +41,7 @@ const PlayerPage = () => {
       <div>
         <AudioPlayer
           autoPlay
-          src={playlist[currentTrack].src}
+          src={tracks[currentTrack].url}
           onPlay={(e) => console.log("onPlay")}
           // other props here
           showSkipControls={true}
