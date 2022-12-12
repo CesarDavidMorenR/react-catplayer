@@ -1,12 +1,10 @@
 import React from 'react'
 
 
-
 const AccountPage = () => {
   return (
 <>
-<h1>profile</h1>
-
+<h1>account page</h1>
 </>
   )
 }

@@ -4,10 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import "./prueba.css"; 
+import "./../../assets/style/ArtistComponent.css"; 
 const ArtistsContainer = () => {
-  const settings = {
-    dots: false,
+  var settings = {
+    dots: true,
     centerMode: false,
     infinite: true,
     centerPadding: "30px",
@@ -25,7 +25,7 @@ const ArtistsContainer = () => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-        /*   dots: false, */
+          dots: true,
         },
       },
       {
@@ -39,8 +39,8 @@ const ArtistsContainer = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
     ],

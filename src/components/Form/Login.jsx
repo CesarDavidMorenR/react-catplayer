@@ -1,13 +1,13 @@
-import React from "react";
-import { useContext, useReducer, useState, useEffect } from "react";
+import React, { useContext, useReducer, useState, useEffect } from "react";
+
+
 import { FetchUser } from "./../../API/FetchUser";
 import { LoginContext, LoginReducer } from "../../context";
 import { useNavigate } from "react-router-dom";
 
 
-
-
 const initialLogin = {
+  
   email: "",
   password: "",
   isLoading: false,
@@ -21,17 +21,17 @@ const Login = () => {
   const { email, password, isLoading, error, isLoggedIn } = state;
   const [users, setUsers] = useState([]);
 
-const url ='  http://localhost:8000/user';
-useEffect(() => {
-  const connection = async () => {
-    const data = await FetchUser(url);
-    setUsers(data);
-  };
-  connection();
-}, [url]);
+  const url = "http://localhost:8000/user";
 
+  useEffect(() => {
+    const connection = async () => {
+      const data = await FetchUser(url);
+      setUsers(data);
+    };
+    connection();
+  }, [url]);
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -51,44 +51,43 @@ const navigate = useNavigate();
     }
   };
 
-
-
   return (
     <>
-     <h2>Login</h2>
+      
 
-<input
-  type="email"
-  className="field_Login"
-  placeholder="Your Email"
-  name="email"
-  value={email}
-  onChange={(e) =>
-    dispatch({
-      type: "field",
-      field: "email",
-      value: e.target.value,
-    })
-  }
-/>
-<input
-  type="password"
-  className="field_Login"
-  placeholder="Your password"
-  name="password"
-  value={password}
-  onChange={(e) =>
-    dispatch({
-      type: "field",
-      field: "password",
-      value: e.target.value,
-    })
-  }
-/>
+            <input
+              type="email"
+              className="field_Login"
+              placeholder="Your Email"
+              name="email"
+              value={email}
+              onChange={(e) =>
+                dispatch({
+                  type: "field",
+                  field: "email",
+                  value: e.target.value,
+                })
+              }
+            />
+            <input
+              type="password"
+              className="field_Login"
+              placeholder="Your password"
+              name="password"
+              value={password}
+              onChange={(e) =>
+                dispatch({
+                  type: "field",
+                  field: "password",
+                  value: e.target.value,
+                })
+              }
+            />
 
-<button onClick={onLogin} >
-  login
-</button>
+            <button onClick={onLogin} className="btn_login">
+              login
+            </button>
+        
     </>
   );
 };

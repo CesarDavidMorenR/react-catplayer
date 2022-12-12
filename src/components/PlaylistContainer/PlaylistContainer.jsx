@@ -3,13 +3,12 @@ import { fetchMusic } from "../../API/FetchMusic";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-
-
+import { Link } from "react-router-dom";
 const PlaylistContainer = () => {
 
 
-  const settings = {
-    dots: false,
+  var settings = {
+    dots: true,
     centerMode: false,
     infinite: true,
     centerPadding: "30px",
@@ -48,11 +47,10 @@ const PlaylistContainer = () => {
     ],
   };
 
-/* const Image = styled.img`
-  width: 80%;
-  height: 80%;
 
-` */
+
+
+
 
 
 
@@ -60,7 +58,7 @@ const PlaylistContainer = () => {
 
 
   const [playlists, setPlaylist] = useState([]);
-  const url = "http://localhost:8000/playlists";
+  const url = `http://localhost:8000/playlists`;
 
   useEffect(() => {
     const playlists = async () => {
@@ -74,17 +72,19 @@ const PlaylistContainer = () => {
     <>
     <h1>playlist</h1>
       <Slider className="status__slider" {...settings}>
+
         {playlists.map((playlist) => (
           <div key={playlist.id} className="status">
-
+            <Link to={`/TracksPage/${playlist.id}`}>
             <div className="status__avatar">
-           <img className="image__playlist" src={playlist.thumbnail} alt={playlist.name} />
+            <img src={playlist.thumbnail} alt={playlist.name} />
             </div>
-
+            
+            </Link>
             <div>
-              <h6>{playlist.name}</h6>
-           {/*    <p>{playlist.isFollowed}</p> */}
-          {/*     <p>{playlist.publicAccessible}</p> */}
+              <h2>{playlist.name}</h2>
+              <p>{playlist.isFollowed}</p>
+              <p>{playlist.publicAccessible}</p>
            {/*    <p>{playlist.primaryColor}</p> */}
             </div>
           </div>

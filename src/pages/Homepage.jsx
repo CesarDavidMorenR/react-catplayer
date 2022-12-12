@@ -1,34 +1,24 @@
-import React from "react";
-import styled from "styled-components";
-import AlbumContainer from "../components/AlbumsContainer/AlbumsContainer";
-import ArtistsContainer from "../components/ArtistContainer/ArtistsContainer";
+import React from 'react'
+import AlbumContainer from '../components/AlbumsContainer/AlbumsContainer'
+import ArtistsContainer from '../components/ArtistContainer/ArtistsContainer'
+import GenresContainer from '../components/GenresContainer/GenresContainer'
+import PlaylistContainer from '../components/PlaylistContainer/PlaylistContainer'
+import TracksContainer from '../components/TracksContainer/TracksContainer'
 
-import ButtonGeners from "../components/GenresContainer/ButtonGeners";
-import Menu from "../components/Menu/Menu";
-import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
-import Search from "../components/Search/Search";
-/* import Footer from "./../components/Footer/Footer"; */
 const Homepage = () => {
   return (
     <>
-   
-      <div>
-        <Search/>
-        <Menu/>
-        <welcomeUser>Welcome user</welcomeUser>
+    <h1>HomePage</h1>
+    <PlaylistContainer/>
+    <AlbumContainer/>
+    {/* <TracksContainer/> */}
+    <ArtistsContainer/>
 
-        <PlaylistContainer />
-        <AlbumContainer />
 
-        <ArtistsContainer />
+<GenresContainer/>
 
-         <ButtonGeners /> 
-        {/*    <Footer /> */}
-      </div>
     </>
-  );
-};
+  )
+}
 
-export default Homepage;
-
-
+export default Homepage

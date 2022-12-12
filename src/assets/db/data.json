@@ -295,11 +295,18 @@
     {
       "firstName": "",
       "lastName": "",
-      "email": "davidAssambler@gmail.com",
+      "email": "koko@queso.com",
       "password": "Roxiwell2.0",
-      "first_name": "david",
-      "last_name": "assamble",
-      "id": "707bb6fe-5e12-43d9-b781-26404ccb8be5"
+      "first_name": "holis",
+      "last_name": "perez",
+      "id": "86d876ae-c451-4806-a3aa-52c8272b47e0"
+    },
+    {
+      "first_name": "emily",
+      "last_name": "ackerman",
+      "email": "mimi.misifu@hotmail.com",
+      "password": "Roxiwell2.0",
+      "id": "0eeec183-6180-412a-ba21-4538c6c732f7"
     }
   ],
   "albums": [

@@ -16,8 +16,8 @@ const [form,setForm]= useState(initialForm);
     handleSubmit,
   } = useForm({
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       email: "",
       password: "",
     },
