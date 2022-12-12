@@ -1,10 +1,16 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
+import Login from '../components/Form/Login/Login'
+import Register from '../components/Form/Register/Register'
+
+import './../assets/style/LoginPage.css'
 
 const LoginPage = () => {
   return (
     <>
-    <Footer/>
+
+<Register/>
+<Login/>
+
     </>
   )
 }

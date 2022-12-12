@@ -280,39 +280,33 @@
       "last_name": "Institute",
       "email": "music@assemblerschool.com",
       "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set1",
+      "password": 123,
       "isLoggedin": false
     },
     {
-      "name": "asdsad",
-      "username": "asdas",
-      "email": "cesardavidmor@gmail.com",
-      "password": "asdadsa",
-      "discountActivated": false,
-      "id": 2
+      "firstName": "",
+      "lastName": "",
+      "email": "mimika@gmail.com",
+      "password": "Roxiwell2.0",
+      "first_name": "mimika",
+      "last_name": "ackerman",
+      "id": "c4991455-6fde-4f5b-a94c-697b824a2a41"
     },
     {
-      "name": "david",
-      "username": "adas",
-      "email": "cesardavidm1or@gmail.com",
-      "password": "123",
-      "discountActivated": false,
-      "id": 3
+      "firstName": "",
+      "lastName": "",
+      "email": "koko@queso.com",
+      "password": "Roxiwell2.0",
+      "first_name": "holis",
+      "last_name": "perez",
+      "id": "86d876ae-c451-4806-a3aa-52c8272b47e0"
     },
     {
-      "name": "david",
-      "username": "mor",
-      "email": "cesardavidmor1@gmail.com",
-      "password": "123",
-      "discountActivated": false,
-      "id": 4
-    },
-    {
-      "name": "david",
-      "username": "mor",
-      "email": "cesardaviddev@gmail.com",
-      "password": "123",
-      "discountActivated": false,
-      "id": 5
+      "first_name": "emily",
+      "last_name": "ackerman",
+      "email": "mimi.misifu@hotmail.com",
+      "password": "Roxiwell2.0",
+      "id": "0eeec183-6180-412a-ba21-4538c6c732f7"
     }
   ],
   "albums": [
