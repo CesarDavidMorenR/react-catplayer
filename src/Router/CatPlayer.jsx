@@ -8,6 +8,10 @@ import SearchPage from '../pages/SearchPage'
 import ListPage from './../pages/ListPage'
 import AccountPage from './../pages/AccountPage'
 import GenresPage from '../pages/GenresPage';
+import TracksPage from '../pages/TracksPage';
+import LoginPage from '../pages/LoginPage';
+
+
 
 
 const CatPlayer = () => {
@@ -15,11 +19,13 @@ const CatPlayer = () => {
    <>
    <Router>
     <Routes>
-        <Route index  element={<Homepage/>}/>
+        <Route path='/' element={<LoginPage/>}/>
+        <Route path='/HomePage'   element={<Homepage/>}/>
         <Route path='/SearchPage' element={<SearchPage/>}/>
         <Route path="/ListPage" element={<ListPage/>}/>
         <Route path='/AccountPage' element={<AccountPage/>} />
         <Route path= '/GenresPage' element={<GenresPage/>}/>
+        <Route path='/TracksPage/:id' element={<TracksPage/>} />
 
         
     </Routes>

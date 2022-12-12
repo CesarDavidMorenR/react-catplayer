@@ -61,15 +61,16 @@ const ArtistsContainer = () => {
   return (
     <>
     <h1>Artist</h1>
-      <Slider className="status__slider" {...settings}>
+      <Slider className="artist_slider" {...settings}>
         {artists[0]?.map((artist) => (
-          <div key={artist.id} className="status">
-            <div className="status__avatar">
+          <div key={artist.id} className="artist_status">
+            <div className="artist_status">
               <img src={artist.photoUrl} alt="" />
+              <h3>{artist.name}</h3>
             </div>
             
-            {/*      <h3>{artist.name}</h3>
-              <h5>{artist.genres}</h5> */}
+              
+              {/* <h5>{artist.genres}</h5>  */}
           </div>
         ))}
       </Slider>

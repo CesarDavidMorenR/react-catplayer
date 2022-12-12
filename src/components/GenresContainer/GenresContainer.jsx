@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { fetchMusic } from "./../../API/FetchMusic";
 import { Link } from "react-router-dom";
-import './Genres.css'
+import './Genres.css';
 
 
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
   console.log(genres);
-  const url = `http://localhost:8000/genres`;
+  const url = "http://localhost:8000/genres";
 
   useEffect(() => {
     const genres = async () => {

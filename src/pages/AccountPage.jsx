@@ -1,10 +1,10 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
+
 
 const AccountPage = () => {
   return (
 <>
-<Footer/>
+<h1>account page</h1>
 </>
   )
 }
