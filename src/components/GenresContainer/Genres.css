@@ -10,6 +10,7 @@
   
 
 
+
 }
 .Btn-genre{
 /* 
@@ -26,9 +27,9 @@
  position: relative;
  transition: .4s ease-in;
  z-index: 1;
- width: 100%;
- height: 100%;
- 
+ text-decoration: none;
+ background-image: linear-gradient(to right top, #d16ba5, #db719b, #e27993, #e6838d,
+  #e88d88, #ed9484, #f19c80, #f4a57d, #fbae75, #feb96d, #fec565, #fbd25f);
  /* border: none; */
  
 }
@@ -45,9 +46,4 @@
 }
 h2{
     margin: 10px;
-}
-
-.GenreName{
-    font-size: 16px;
-    text-align: center;
 }

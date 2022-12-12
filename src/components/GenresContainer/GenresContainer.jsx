@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { fetchMusic } from "../../API/FetchMusic";
 import "./Genres.css";
+=======
+import { fetchMusic } from "./../../API/FetchMusic";
+import { Link } from "react-router-dom";
+import './Genres.css';
+
+>>>>>>> 3d552cd3c2d6909f5ad56e890a48cafc22a1f4ae
 
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
-  console.log(genres);
+/*   console.log(genres); */
   const url = "http://localhost:8000/genres";
 
   useEffect(() => {
@@ -14,6 +21,28 @@ const GenresContainer = () => {
     };
     genres();
   }, [url]);
+
+  // const colors = [
+  //   "#ef5777",
+  //   "#575fcf",
+  //   "#4bcffa",
+  //   "#34e7e4",
+  //   "#0be881",
+  //   "#f53b57",
+  //   "#3c40c6",
+  //   "#0fbcf9",
+  //   "#00d8d6",
+  //   "#05c46b",
+  //   "#ffc048",
+  //   "#ffdd59",
+  //   "#ff5e57",
+  //   "#d2dae2",
+  //   "#485460",
+  //   "#ffa801",
+  //   "#ffd32a",
+  //   "#ff3f34"
+  // ]; 
+
   return (
     <>
       <div>
@@ -27,7 +56,19 @@ const GenresContainer = () => {
                 <p className="GenreName">{genre.name}</p>
               </button>
             </div>
+<<<<<<< HEAD
           ))}
+=======
+            <div className="Btn_container">
+        {genres.map((genre) => (
+          <div key={genre.id} >
+          <Link to={'/GenresPage'}>
+             <button className="Btn-genre">{genre.name}</button>
+             </Link>
+            </div>
+          
+        ))}
+>>>>>>> 3d552cd3c2d6909f5ad56e890a48cafc22a1f4ae
         </div>
       </div>
     </>

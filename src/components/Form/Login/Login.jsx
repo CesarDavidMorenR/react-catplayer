@@ -1,6 +1,6 @@
 import React, { useContext, useReducer, useState, useEffect } from "react";
 
-import { FetchUser } from "../../../API/FetchUser";
+import { FetchUser } from "../../../API/fetchUser";
 import { LoginContext, LoginReducer } from "../../../context";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +16,9 @@ const initialLogin = {
 
 const Login = () => {
   const { login } = useContext(LoginContext);
+    console.log(login)
+
+
   const [state, dispatch] = useReducer(LoginReducer, initialLogin);
   const { email, password, isLoading, error, isLoggedIn } = state;
   const [users, setUsers] = useState([]);
