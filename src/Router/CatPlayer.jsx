@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes,Route } from "react-router-dom";/* impo
 
 import Homepage from '../pages/Homepage'
 import SearchPage from '../pages/SearchPage'
-import ListPage from './../pages/ListPage'
+import LikeSongs from './../pages/LikeSongs'
 import AccountPage from './../pages/AccountPage'
 import GenresPage from '../pages/GenresPage';
 import TracksPage from '../pages/TracksPage';
@@ -22,12 +22,10 @@ const CatPlayer = () => {
         <Route path='/' element={<LoginPage/>}/>
         <Route path='/HomePage'   element={<Homepage/>}/>
         <Route path='/SearchPage' element={<SearchPage/>}/>
-        <Route path="/ListPage" element={<ListPage/>}/>
+        <Route path="/LikeSongs" element={<LikeSongs/>}/>
         <Route path='/AccountPage' element={<AccountPage/>} />
         <Route path= '/GenresPage' element={<GenresPage/>}/>
         <Route path='/TracksPage/:id' element={<TracksPage/>} />
-
-        
     </Routes>
 
    </Router>

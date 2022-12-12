@@ -64,7 +64,7 @@ const PlaylistContainer = () => {
     const playlists = async () => {
       const data = await fetchMusic(url);
       setPlaylist(data);
-      console.log(data);
+   /*    console.log(data); */
     };
     playlists();
   }, [url]);

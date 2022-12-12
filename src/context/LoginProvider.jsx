@@ -6,10 +6,10 @@ import { LoginReducer } from "./LoginReducer";
 
 export const LoginProvider = ({ children }) => {
   const init = () => {
-    const user = JSON.parse(localStorage.getItem("user"));
+    const email = JSON.parse(localStorage.getItem("email"));
     return {
-      isLogged: !!user,
-      user,
+      isLogged: !!email,
+      email,
     };
   };
 
@@ -17,11 +17,11 @@ export const LoginProvider = ({ children }) => {
 
   const login = (email = "") => {
     const user = {
-     
       email,
     };
 
     localStorage.setItem("email", JSON.stringify(email)); //show information
+  
 
     dispatch({
       type: types.login,
@@ -30,7 +30,7 @@ export const LoginProvider = ({ children }) => {
   };
 
   const logout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("email");
 
     dispatch({
       type: types.logout,

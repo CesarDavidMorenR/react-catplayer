@@ -53,7 +53,7 @@ const ArtistsContainer = () => {
     const artists = async () => {
       const data = await fetchMusic(url);
       setArtists(data);
-      console.log(data);
+     /*  console.log(data); */
     };
     artists();
   }, [url]);
