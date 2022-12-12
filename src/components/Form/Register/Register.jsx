@@ -120,7 +120,7 @@ const Register = () => {
                 />
                 <p className="error_message">{errors.password?.message}</p>
 
-                <input type="submit" value="REGISTER" className="modal__btn__register" />
+                <input type="submit" value="REGISTER" className="modal__btn" />
               </form>
             </div>
           </div>

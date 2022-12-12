@@ -31,7 +31,7 @@ export function LoginReducer(state,action){
       return{
         ...state,
         isLoggedIn:false,
-        username:'',
+        email:'',
         password:''
       };
     }

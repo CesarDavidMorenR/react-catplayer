@@ -16,6 +16,9 @@ const initialLogin = {
 
 const Login = () => {
   const { login } = useContext(LoginContext);
+    console.log(login)
+
+
   const [state, dispatch] = useReducer(LoginReducer, initialLogin);
   const { email, password, isLoading, error, isLoggedIn } = state;
   const [users, setUsers] = useState([]);

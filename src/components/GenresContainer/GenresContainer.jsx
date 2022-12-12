@@ -5,7 +5,7 @@ import './Genres.css'
 
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
-  console.log(genres);
+/*   console.log(genres); */
   const url = "http://localhost:8000/genres";
 
   useEffect(() => {
