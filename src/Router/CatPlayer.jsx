@@ -11,6 +11,8 @@ import AccountPage from "./../pages/AccountPage";
 import TracksPage from "../pages/TracksPage";
 import LoginPage from "../pages/LoginPage";
 
+//TODO LOCAL STORAGE CON COMPROVACION
+
 const CatPlayer = () => {
   return (
     <>
