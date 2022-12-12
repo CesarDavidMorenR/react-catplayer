@@ -6,9 +6,9 @@ import { useState, useEffect } from "react";
 import { FetchUser } from "../../../API/FetchUser";
 import { FetchCreateUsers } from "../../../API/FetchCreateUsers";
 
-const Register = (initialForm) => {
-  const [form, setForm] = useState(initialForm);
+import './Register.css'
 
+const Register = () => {
   const {
     register,
     formState: { errors },
@@ -57,9 +57,15 @@ const Register = (initialForm) => {
 
   return (
     <>
-      <h2>Register</h2>
+<a href="#modal-opened" className="link-1" id="modal-closed">
+        REGISTER
+      </a>
+    <div className="modal-container-register" id='modal-opened-register'>
+      <div className="modal-register">
+        <div className="login-card-register">
+          <div className="login-form-register">
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("first_name", {
             required: "username is required",
@@ -115,6 +121,19 @@ const Register = (initialForm) => {
 
         <input type="submit" />
       </form>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+      
     </>
   );
 };

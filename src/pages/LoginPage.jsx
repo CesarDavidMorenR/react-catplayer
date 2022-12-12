@@ -7,9 +7,12 @@ import './../assets/style/LoginPage.css'
 const LoginPage = () => {
   return (
     <>
-{/* 
-<Register/> */}
-<Login/>
+   
+<h1>CatPlayer</h1>
+{/* <Register/>  */}
+ <Login/>  
+  
+
 
     </>
   )
