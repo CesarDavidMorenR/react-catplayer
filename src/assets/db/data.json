@@ -291,6 +291,15 @@
       "first_name": "mimika",
       "last_name": "ackerman",
       "id": "c4991455-6fde-4f5b-a94c-697b824a2a41"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "davidAssambler@gmail.com",
+      "password": "Roxiwell2.0",
+      "first_name": "david",
+      "last_name": "assamble",
+      "id": "707bb6fe-5e12-43d9-b781-26404ccb8be5"
     }
   ],
   "albums": [
