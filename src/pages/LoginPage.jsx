@@ -7,8 +7,8 @@ import './../assets/style/LoginPage.css'
 const LoginPage = () => {
   return (
     <>
-
-<Register/>
+{/* 
+<Register/> */}
 <Login/>
 
     </>
