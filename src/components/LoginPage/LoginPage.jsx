@@ -65,6 +65,9 @@ const LoginPage = () => {
 
   return (
     <>
+    <header>
+      <img src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670922661/catplayer_logo_iggwv1.png" alt="cat player"/>
+    </header>
       <div className="login__signup">
         <ThemeProvider theme={theme}>
           <Container component="main" maxWidth="xs">
