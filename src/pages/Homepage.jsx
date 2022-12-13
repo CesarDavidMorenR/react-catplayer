@@ -9,7 +9,7 @@ import '../components/home/Home.css'
 const Homepage = () => {
   return (
     <>
-    <header>
+     <header>
       <img className='logo' src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670922661/catplayer_logo_iggwv1.png" alt="cat player"/>
     </header>
     <h1>HomePage</h1>
