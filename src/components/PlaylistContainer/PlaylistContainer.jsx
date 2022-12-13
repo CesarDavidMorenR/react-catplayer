@@ -3,6 +3,7 @@ import { fetchMusic } from "../../API/FetchMusic";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { Link } from "react-router-dom";
 const PlaylistContainer = () => {
 
 
@@ -57,13 +58,13 @@ const PlaylistContainer = () => {
 
 
   const [playlists, setPlaylist] = useState([]);
-  const url = "http://localhost:8000/playlists";
+  const url = `http://localhost:8000/playlists`;
 
   useEffect(() => {
     const playlists = async () => {
       const data = await fetchMusic(url);
       setPlaylist(data);
-      console.log(data);
+   /*    console.log(data); */
     };
     playlists();
   }, [url]);
@@ -71,13 +72,15 @@ const PlaylistContainer = () => {
     <>
     <h1>playlist</h1>
       <Slider className="status__slider" {...settings}>
+
         {playlists.map((playlist) => (
           <div key={playlist.id} className="status">
-
+            <Link to={`/TracksPage/${playlist.id}`}>
             <div className="status__avatar">
             <img src={playlist.thumbnail} alt={playlist.name} />
             </div>
-
+            
+            </Link>
             <div>
               <h2>{playlist.name}</h2>
               <p>{playlist.isFollowed}</p>
