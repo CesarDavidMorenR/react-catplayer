@@ -4,15 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import "./../../assets/style/ArtistComponent.css"; 
+import "./../../assets/style/ArtistComponent.css";
 const ArtistsContainer = () => {
-  var settings = {
+  const settings = {
     dots: true,
-    centerMode: false,
-    infinite: true,
-    centerPadding: "30px",
-
-    /* focusOnSelect:true, */
+    infinite: false,
+    focusOnSelect: true,
     speed: 500,
     /*  slidesToShow: 7,
     slidesToScroll: 4, */
@@ -53,21 +50,21 @@ const ArtistsContainer = () => {
     const artists = async () => {
       const data = await fetchMusic(url);
       setArtists(data);
-      console.log(data);
+     /*  console.log(data); */
     };
     artists();
   }, [url]);
 
   return (
     <>
-    <h1>Artist</h1>
+      <h1>Artist</h1>
       <Slider className="status__slider" {...settings}>
         {artists[0]?.map((artist) => (
           <div key={artist.id} className="status">
             <div className="status__avatar">
               <img src={artist.photoUrl} alt="" />
             </div>
-            
+
             {/*      <h3>{artist.name}</h3>
               <h5>{artist.genres}</h5> */}
           </div>
