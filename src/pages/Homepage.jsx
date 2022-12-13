@@ -7,7 +7,8 @@ import Menu from "../components/Menu/Menu";
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
 /* import TracksContainer from "../components/TracksContainer/TracksContainer"; */
 import { LoginContext } from "../context";
-import SeachContainer from "./SearchContainer";
+import SearchContainer from "./SearchContainer";
+import Navbar from "../components/Navbar";
 
 const Homepage = () => {
   const { email, logout } = useContext(LoginContext);
@@ -35,9 +36,10 @@ const Homepage = () => {
           </button>
         </div>
       </div>
-
-      <h1>WELCOME USER</h1>
-      <SeachContainer />
+      <Navbar />
+      <p>
+        <strong>WELCOME</strong>
+      </p>
       <Menu />
 
       <PlaylistContainer />

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { fetchMusic } from "../../API/FetchMusic";
-
+import "./AlbumsContainer.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
 const AlbumContainer = () => {
-  var settings = {
-    dots: true,
+  const settings = {
     centerMode: false,
     infinite: true,
-    centerPadding: "30px",
+    centerPadding: "80px",
 
     /* focusOnSelect:true, */
     speed: 500,
@@ -25,7 +24,6 @@ const AlbumContainer = () => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -58,16 +56,16 @@ const AlbumContainer = () => {
   }, [url]);
   return (
     <>
-      <h1>albums</h1>
+      <h1>Albums</h1>
       <Slider className="status__slider" {...settings}>
         {albums[0]?.map((album) => (
           <div key={album.id} className="status">
             <div className="status__avatar">
-              <img src={album.imageUrl} alt="" />
+              <img className="albums__image" src={album.imageUrl} alt="" />
             </div>
             <div>
               <h2>{album.name}</h2>
-              <p>{album.artist}</p>
+              {/* <p>{album.artist}</p> */}
             </div>
           </div>
         ))}

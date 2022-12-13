@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
-import './../../assets/style/ButtonGeners.css'
+import "./../../assets/style/ButtonGeners.css";
 
 const ButtonGeners = () => {
   return (
-   <>
-    <div className='BtnContainer'>
-    <div className='BtnTitle'>
-    <h2>Música por Género</h2>
-    </div>
-    
-     <div className="BtnGenre">
+    <>
+      <div className="BtnContainer">
+        <div className="BtnTitle">
+          <h2>Música por Género</h2>
+        </div>
+
+        <div className="BtnGenre">
           <button className="BtnPop">Pop</button>
           <button className="BtnRagge">Reggaeton</button>
           <button className="BtnAlt">Alternative</button>
@@ -24,12 +24,10 @@ const ButtonGeners = () => {
           <button className="BtnRock">Rock</button>
           <button className="BtnChillout">Chillout</button>
           <button className="BtnPiano">Piano</button>
-</div>
-</div>
-   
-   
-   </>
-  )
-}
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default ButtonGeners
+export default ButtonGeners;

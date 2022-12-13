@@ -7,12 +7,14 @@ import "slick-carousel/slick/slick.css";
 import "./../../assets/style/ArtistComponent.css";
 const ArtistsContainer = () => {
   const settings = {
-    dots: true,
-    infinite: false,
-    focusOnSelect: true,
+    centerMode: false,
+    infinite: true,
+    centerPadding: "30px",
+
+    /* focusOnSelect:true, */
     speed: 500,
     /*  slidesToShow: 7,
-    slidesToScroll: 4, */
+      slidesToScroll: 4, */
     initialSlide: 0,
     responsive: [
       {
@@ -22,7 +24,6 @@ const ArtistsContainer = () => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -65,8 +66,8 @@ const ArtistsContainer = () => {
               <img src={artist.photoUrl} alt="" />
             </div>
 
-            {/*      <h3>{artist.name}</h3>
-              <h5>{artist.genres}</h5> */}
+            <h3>{artist.name}</h3>
+            {/*  <h5>{artist.genres}</h5> */}
           </div>
         ))}
       </Slider>
