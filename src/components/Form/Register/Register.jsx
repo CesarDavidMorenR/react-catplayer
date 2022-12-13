@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import { FetchUser } from "../../../API/fetchUser";
+import { FetchUser } from "../../../API/FetchUser";
 import { FetchCreateUsers } from "../../../API/FetchCreateUsers";
 
 import "./Register.css";
@@ -57,7 +57,11 @@ const Register = () => {
 
   return (
     <>
-      <a href="#modal-opened-register" className="link-1-register" id="modal-closed-register">
+      <a
+        href="#modal-opened-register"
+        className="link-1-register"
+        id="modal-closed-register"
+      >
         REGISTER
       </a>
 

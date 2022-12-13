@@ -5,23 +5,18 @@ import Register from "../components/Form/Register/Register";
 
 import "./../assets/style/LoginPage.css";
 
-
-
-
-
-
 const LoginPage = () => {
   return (
     <>
-      <h1>CatPlayer</h1>
-      <div >
-        <Register /> 
-        
-         <Login /> 
+      <div>
+        <h1>CatPlayer</h1>
+        <div className="button__loginPage">
+          <Register />
+          <Login />
+        </div>
       </div>
     </>
   );
 };
 
 export default LoginPage;
-
