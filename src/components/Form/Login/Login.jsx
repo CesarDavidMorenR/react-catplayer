@@ -54,10 +54,24 @@ const Login = () => {
 
   return (
     <>
+     {/* <header>
+      <img className="imgCat" src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670922661/catplayer_logo_iggwv1.png" alt="cat player"/>
+    </header> */}
+    {/* DARK OPTION */}
+    <header><h1>REACT 
+        CATPLAYER
+      </h1>
+
+      <img className="imgCat" src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670950770/Mi_proyecto_1_ikdpct.png" alt="cat player"/>
+      
+      
+    
+    </header>
+    
       <a href="#modal-opened" className="link-1" id="modal-closed">
         LOGIN
       </a>
-
+     
       <div className="modal-container" id="modal-opened">
         <div className="modal">
           <div classNameName="login-card">

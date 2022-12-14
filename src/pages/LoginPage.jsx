@@ -9,12 +9,12 @@ const LoginPage = () => {
   return (
     <>
       <div>
-        <h1>CatPlayer</h1>
-        <div className="button__loginPage">
+        {/* <h1>CatPlayer</h1>
+        <div className="button__loginPage"> */}
           <Register />
           <Login />
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };
