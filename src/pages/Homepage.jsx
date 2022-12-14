@@ -7,8 +7,8 @@ import Menu from "../components/Menu/Menu";
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
 /* import TracksContainer from "../components/TracksContainer/TracksContainer"; */
 import { LoginContext } from "../context";
-import SearchContainer from "./SearchContainer";
 import Navbar from "../components/Navbar";
+import { Button } from "@mui/material";
 
 const Homepage = () => {
   const { email, logout } = useContext(LoginContext);
@@ -30,13 +30,13 @@ const Homepage = () => {
         <h1 className="welcome-user">
           {email ? `Welcome back, ${email.username}` : null}
         </h1>
-        <div className="btn">
-          <button className="button_top" onClick={onLogout}>
-            logout
-          </button>
-        </div>
       </div>
       <Navbar />
+      <div className="btn">
+        <Button variant="contained" className="button_top" onClick={onLogout}>
+          logout
+        </Button>
+      </div>
       <p>
         <strong>WELCOME</strong>
       </p>

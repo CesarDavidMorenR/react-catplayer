@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchMusic } from "../../API/FetchMusic";
 import { Link } from "react-router-dom";
+import "./Genres.css";
 const GenresContainer = () => {
   const [genres, setGenres] = useState([]);
   /*   console.log(genres); */
@@ -44,20 +45,11 @@ const GenresContainer = () => {
         <div className="Btn_container">
           {genres.map((genre) => (
             <div key={genre.id}>
-              <button className="Btn-genre">
-                <p className="GenreName">{genre.name}</p>
-              </button>
+              <Link to={"/GenresPage"}>
+                <button className="Btn-genre">{genre.name}</button>
+              </Link>
             </div>
           ))}
-          <div className="Btn_container">
-            {genres.map((genre) => (
-              <div key={genre.id}>
-                <Link to={"/GenresPage"}>
-                  <button className="Btn-genre">{genre.name}</button>
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </>

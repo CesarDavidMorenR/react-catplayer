@@ -10,6 +10,7 @@ import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import SeachContainer from "./SearchContainer";
+import Button from "@mui/material/Button";
 /* import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -177,12 +178,8 @@ export default function Navbar() {
           <Search>
             {/*  <SearchIcon /> */}
             <SeachContainer />
-
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
           </Search>
+          <Button color="inherit">Login</Button>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
