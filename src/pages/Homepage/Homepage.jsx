@@ -5,7 +5,7 @@ import GenresContainer from "../../components/GenresContainer/GenresContainer";
 import TracksContainer from "../../components/TracksContainer/TracksContainer";
 import "./Homepage.css";
 import TextField from "@mui/material/TextField";
-import Menu from "../../components/Menu/Menu";
+
 import PlaylistContainer from "../../components/PlaylistContainer/PlaylistContainer";
 import { useAuthContext } from "../../context/LoginContext";
 
@@ -27,12 +27,12 @@ const Homepage = (props) => {
           label="Search"
         />
       </div>
-      <Menu />
+   
       <PlaylistContainer />
       <AlbumContainer />
       <ArtistsContainer />
       <GenresContainer />
-      <TracksContainer/> 
+     {/*  <TracksContainer/>  */}
 
     </>
   );
