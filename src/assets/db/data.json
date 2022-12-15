@@ -108,7 +108,7 @@
       "url": "https://res.cloudinary.com/dmkdsujzh/video/upload/v1644583929/tracks-dev/Color_Out_-_Alone_aw3gmk.mp3",
       "thumbnail": "https://res.cloudinary.com/dmkdsujzh/image/upload/v1644583757/tracks-thumbnails-dev/alone_rfib7a.jpg",
       "genre": "poprock",
-      "liked": false
+      "liked": true
     },
     {
       "id": 3,
