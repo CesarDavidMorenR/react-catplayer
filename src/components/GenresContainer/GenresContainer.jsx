@@ -12,7 +12,7 @@ const GenresContainer = () => {
     <>
       <div>
         <div>
-          <h2>Música por Género</h2>
+          <h1>Música por Género</h1>
         </div>
      
           <div className="Btn_container">

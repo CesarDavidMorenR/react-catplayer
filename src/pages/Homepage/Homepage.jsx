@@ -24,16 +24,16 @@ const Homepage = (props) => {
           id="outlined-basic"
           variant="outlined"
           fullWidth
-          label="🔍Search"
+          label="Search"
         />
       </div>
-      <Menu />
+   
       <PlaylistContainer />
       <AlbumContainer />
       <ArtistsContainer />
       <GenresContainer />
-      {/* <TracksContainer/> */}
-     
+ 
+
     </>
   );
 };
