@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -8,9 +6,11 @@ import useFetchApi from "../../API/useFetchApi";
 import "./ArtistContainer.css";
 const ArtistsContainer = () => {
   const settings = {
-    dots: true,
-    infinite: false,
-    focusOnSelect: true,
+    centerMode: false,
+    infinite: true,
+    centerPadding: "30px",
+
+    /* focusOnSelect:true, */
     speed: 500,
     /*  slidesToShow: 7,
     slidesToScroll: 4, */
@@ -43,7 +43,6 @@ const ArtistsContainer = () => {
       },
     ],
   };
-
   const { artists } = useFetchApi();
 
   return (
@@ -52,12 +51,14 @@ const ArtistsContainer = () => {
       <Slider className="status__slider" {...settings}>
         {artists[0]?.map((artist) => (
           <div key={artist.id} className="status">
-            <div className="status__avatar">
-              <img src={artist.photoUrl} alt="" />
+            <div className="">
+              <img
+                className="status__avatar-artist"
+                src={artist.photoUrl}
+                alt=""
+              />
             </div>
-
-            {/*      <h3>{artist.name}</h3>
-              <h5>{artist.genres}</h5> */}
+            <h2 className="artist_name">{artist.name}</h2>
           </div>
         ))}
       </Slider>
