@@ -3,7 +3,25 @@ import { useState, useEffect } from "react";
 const useFetchUser = () => {
   const urlUsers = "http://localhost:8000/user";
 
+
+  const urlPlaylist =  'http://localhost:8000/playlists';
+  const urlTracks ='http://localhost:8000/tracks';
+  const urlUser = 'http://localhost:8000/user';
+  const urlAlbums = 'http://localhost:8000/albums';
+  const urlArtists= 'http://localhost:8000/artists';
+  const urlGenres = 'http://localhost:8000/genres';
+
   const [users, setUsers] = useState([]);
+  const [playlist, setPlaylist] = useState([]);
+  const [tracks, setTracks] = useState([]);
+  const [user, setUser] = useState([]);
+  const [albums, setAlbums] = useState([]);
+  const [artists, setArtists] = useState([]);
+   const [genres, setGenres] = useState([]);
+
+
+
+
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -22,6 +40,116 @@ const useFetchUser = () => {
     };
     fetchData();
   }, [urlUsers]);
+
+
+    useEffect(() => {
+      setError(false);
+      setLoading(true);
+      const fetchData = async () => {
+        try {
+          const response = await fetch(urlPlaylist);
+          const playLists = await response.json();
+          setPlaylist(playLists);
+        } catch (error) {
+          setError(true);
+        }
+        setLoading(false);
+      };
+      fetchData();
+    }, [urlPlaylist]);
+  
+  
+  //tracks
+  
+    useEffect(() => {
+      setError(false);
+      setLoading(true);
+      const fetchData = async () => {
+        try {
+          const response = await fetch(urlTracks);
+          const tracks = await response.json();
+          setTracks(tracks);
+        } catch (error) {
+          setError(true);
+        }
+        setLoading(false);
+      };
+      fetchData();
+    }, [urlTracks]);
+
+  //usern
+
+      useEffect(() => {
+        setError(false);
+        setLoading(true);
+        const fetchData = async () => {
+          try {
+            const response = await fetch(urlTracks);
+            const tracks = await response.json();
+            setTracks(tracks);
+          } catch (error) {
+            setError(true);
+          }
+          setLoading(false);
+        };
+        fetchData();
+      }, [urlTracks]);
+
+  //albumbs
+
+        useEffect(() => {
+          setError(false);
+          setLoading(true);
+          const fetchData = async () => {
+            try {
+              const response = await fetch(urlAlbums);
+              const albums = await response.json();
+              setAlbums(albums);
+            } catch (error) {
+              setError(true);
+            }
+            setLoading(false);
+          };
+          fetchData();
+        }, [urlAlbums]);
+
+  //artist
+
+  
+        useEffect(() => {
+          setError(false);
+          setLoading(true);
+          const fetchData = async () => {
+            try {
+              const response = await fetch(urlArtists);
+              const artists = await response.json();
+              setAlbums(artists);
+            } catch (error) {
+              setError(true);
+            }
+            setLoading(false);
+          };
+          fetchData();
+        }, [urlArtists]);
+
+  //genres
+  
+        useEffect(() => {
+          setError(false);
+          setLoading(true);
+          const fetchData = async () => {
+            try {
+              const response = await fetch(urlGenres);
+              const genres = await response.json();
+              setAlbums(genres);
+            } catch (error) {
+              setError(true);
+            }
+            setLoading(false);
+          };
+          fetchData();
+        }, [urlGenres]);
+
 
   function getAllUsers() {
     return users;
