@@ -4,7 +4,7 @@ import "react-h5-audio-player/lib/styles.css";
 import useFetchApi from "../API/useFetchApi";
 
 const PlayerPage = () => {
-  const {tracks} = useFetchApi();
+  const { tracks } = useFetchApi();
 
   //   [
 
@@ -16,6 +16,14 @@ const PlayerPage = () => {
   console.log(currentTrack);
   // Wasn't working until i put optional chaining operator "?" before url in playlist
   const playlist = tracks[currentTrack]?.url;
+  const thumbnail = tracks[currentTrack]?.thumbnail;
+  const name = tracks[currentTrack]?.name;
+
+  const artist = tracks[currentTrack]?.artist;
+
+  const genre = tracks[currentTrack]?.genre;
+  const liked = tracks[currentTrack]?.liked;
+
   console.log(playlist);
 
   const handleClickNext = () => {
@@ -39,8 +47,14 @@ const PlayerPage = () => {
   return (
     <>
       <div>
+        <img src={thumbnail} alt="" />
+        <p>{name}</p>
+        <p>{artist}</p>
+        <p>{genre}</p>
+        <div>{{ liked } === false ? "❤" : "😨"}</div>
+
         <AudioPlayer
-          autoPlay
+          // autoPlay
           src={playlist}
           onPlay={(e) => console.log("onPlay")}
           // other props here
