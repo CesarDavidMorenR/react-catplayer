@@ -5,9 +5,9 @@ import GenresContainer from "../../components/GenresContainer/GenresContainer";
 import TracksContainer from "../../components/TracksContainer/TracksContainer";
 import "./Homepage.css";
 import TextField from "@mui/material/TextField";
-import Menu from "../../components/Menu/Menu";
 import PlaylistContainer from "../../components/PlaylistContainer/PlaylistContainer";
 import { useAuthContext } from "../../context/LoginContext";
+import Footer from "../../components/Footer/Footer";
 
 const Homepage = (props) => {
   const { isAuthenticated } = useAuthContext();
@@ -27,13 +27,11 @@ const Homepage = (props) => {
           label="Search"
         />
       </div>
-   
       <PlaylistContainer />
       <AlbumContainer />
       <ArtistsContainer />
       <GenresContainer />
- 
-
+      {/* <TracksContainer/> */}
     </>
   );
 };

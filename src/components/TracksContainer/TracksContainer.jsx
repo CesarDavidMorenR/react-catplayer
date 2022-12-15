@@ -113,7 +113,7 @@ const TracksContainer = () => {
             <p className="nameTracks">{name}</p>
             <p className="trackartist">{artist}</p>
             <p className="genreTrack">{genre}</p>
-            <div>{{ liked } === false ? "❤" : ""}</div>
+            <p>{{ liked } === false ? "❤" : "💘"}</p>
 
             <AudioPlayer
               // autoPlay
