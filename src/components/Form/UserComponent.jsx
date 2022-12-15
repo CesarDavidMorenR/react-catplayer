@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { fetchMusic } from "../../API/fetchMusic";
+import useFetchApi from "../../API/useFetchAPI";
+
 
 const UserContainer = () => {
-  const [users, setUsers] = useState([]);
-  const url = " http://localhost:8000/user";
+  const {users} = useFetchApi();
 
-  useEffect(() => {
-    const users = async () => {
-      const data = await fetchMusic(url);
-      setUsers(data);
-      console.log(data);
-    };
-    users();
-  }, [url]);
+
   return (
     <>
       <div>

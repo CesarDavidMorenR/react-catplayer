@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchMusic } from "../../API/FetchMusic";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import useFetchApi from "../../API/useFetchApi";
 
 const AlbumContainer = () => {
 
@@ -54,17 +53,11 @@ const AlbumContainer = () => {
 
 
 
-  const [albums, setAlbums] = useState([]);
-  const url = "http://localhost:8000/albums";
+  const {albums} = useFetchApi();
+ 
 
-  useEffect(() => {
-    const connection = async () => {
-      const data = await fetchMusic(url);
-      setAlbums(data);
-      /* console.log(data); */
-    };
-    connection();
-  }, [url]);
+  
+
   return (
     <>
     <h1>albums</h1>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { fetchMusic } from "../../API/FetchMusic";
+import useFetchApi from "../../API/useFetchApi";
+
 
 
 
@@ -14,19 +15,8 @@ const TracksContainer = () => {
 
 
 
-  const [tracks, setTracks] = useState([]);
-  const url = "http://localhost:8000/tracks";
-
-  useEffect(() => {
-    const tracks = async () => {
-      const data = await fetchMusic(url);
-      setTracks(data);
-    };
-    tracks();
-  }, [url]);
-  /* function getRandom(max) {
-    return Math.floor(Math.random(3) * max);
-  } */
+  const {tracks} = useFetchApi();
+ 
   return (
     <>
       <div>

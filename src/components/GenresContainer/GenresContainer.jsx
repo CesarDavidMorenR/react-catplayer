@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { fetchMusic } from "../../API/FetchMusic";
+import useFetchApi from "../../API/useFetchApi";
 import './Genres.css'
 
 
 const GenresContainer = () => {
-  const [genres, setGenres] = useState([]);
-/*   console.log(genres); */
-  const url = "http://localhost:8000/genres";
+  const {genres} = useFetchApi();
 
-  useEffect(() => {
-    const genres = async () => {
-      const data = await fetchMusic(url);
-      setGenres(data);
-    };
-    genres();
-  }, [url]);
+
   return (
     <>
       <div>

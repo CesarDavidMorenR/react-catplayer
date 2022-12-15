@@ -6,33 +6,25 @@ import GenresContainer from "../components/GenresContainer/GenresContainer";
 import Menu from "../components/Menu/Menu";
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
 import TracksContainer from "../components/TracksContainer/TracksContainer";
-import { LoginContext } from "../context";
+import { useLoginContext } from "../context/LoginContext";
 
-const Homepage = () => {
-  const { email, logout } = useContext(LoginContext);
-  console.log(email);
 
-  const navigate = useNavigate();
+const Homepage = (props) => {
+const {isAuthenticated} = useLoginContext()
+const user = JSON.parse(localStorage.getItem("user"));
 
-  const onLogout = () => {
-    logout();
-
-    navigate("/", {
-      replace: true,
-    });
-  };
 
   return (
     <>
-      <div className="container-user">
-        <h1 className="welcome-user">
-        {email ? `Welcome back, ${email.username}` : null}
-        </h1>
-        <div className="btn">
-        <button className="button_top" onClick={onLogout}>logout</button>
+    <div>
+    {isAuthenticated ? (
+          <div>
+            <span>Hi, {user}</span>
+          </div>
+        ) : null}
+      </div>
 
-        </div>
-        </div>
+
 
       <h1>WELCOME USER</h1>
       <Menu />

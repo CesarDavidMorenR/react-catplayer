@@ -1,14 +1,16 @@
 import "./App.css";
-import { LoginProvider } from "./context/LoginProvider";
+import { LoginContextProvider } from "./context/LoginContext";
+
 
 import CatPlayer from "./Router/CatPlayer";
 
 function App() {
   return (
     <>
-      <LoginProvider>
+      <LoginContextProvider>
         <CatPlayer />
-      </LoginProvider>
+        </LoginContextProvider>
+     
     </>
   );
 }

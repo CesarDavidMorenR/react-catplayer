@@ -1,56 +1,43 @@
-import React, { useContext, useReducer, useState, useEffect } from "react";
-
-import { FetchUser } from "../../../API/FetchUser";
-import { LoginContext, LoginReducer } from "../../../context";
+import React from "react";
+import { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
 import "./Login.css";
+import useFetchApi from "../../../API/useFetchApi";
+import { useLoginContext } from "../../../context/LoginContext";
 
-const initialLogin = {
-  email: "",
-  password: "",
-  isLoading: false,
-  error: "",
-  isLoggedIn: false,
-};
+
 
 const Login = () => {
-  const { login } = useContext(LoginContext);
-    console.log(login)
+ 
+  const { login } = useLoginContext();
+  const { handleSubmit, control } = useForm();
+  const { handleSubmit: handleSubmit2, control: control2, reset } = useForm();
 
 
-  const [state, dispatch] = useReducer(LoginReducer, initialLogin);
-  const { email, password, isLoading, error, isLoggedIn } = state;
-  const [users, setUsers] = useState([]);
+  const [loginError, setLoginError] = useState(false);
+  const [usernameError, setUsernameError] = useState(false);
+  const [newEmailError, setNewEmailError] = useState(false);
 
-  const url = "http://localhost:8000/user";
 
-  useEffect(() => {
-    const connection = async () => {
-      const data = await FetchUser(url);
-      setUsers(data);
-    };
-    connection();
-  }, [url]);
 
+
+  const {users} = useFetchApi()
   const navigate = useNavigate();
 
-  const onLogin = (e) => {
-    e.preventDefault();
-    const userExist = users.map((user) => {
-      if (user.email === state.email) {
-        return true;
+  const onSubmit = (data) => {
+    users.forEach((user) => {
+      if (user.email === data.email && user.password === data.password) {
+        localStorage.setItem("user", JSON.stringify(user.username));
+        setLoginError(false);
+        login();
       } else {
-        return false;
+        setLoginError(true);
+        setTimeout(() => {
+          setLoginError(false);
+        }, 3000);
       }
     });
-    if (userExist.includes(true)) {
-      navigate("/HomePage");
-      console.log("successfully");
-    } else {
-      navigate("/");
-      console.log("unsuccessful");
-    }
   };
 
   return (
@@ -67,33 +54,20 @@ const Login = () => {
                 type="email"
                 placeholder="Your Email"
                 name="email"
-                value={email}
-                onChange={(e) =>
-                  dispatch({
-                    type: "field",
-                    field: "email",
-                    value: e.target.value,
-                  })
-                }
+              
+                
               />
               <input
                 type="password"
                 placeholder="Your password"
                 name="password"
-                value={password}
-                onChange={(e) =>
-                  dispatch({
-                    type: "field",
-                    field: "password",
-                    value: e.target.value,
-                  })
-                }
+               
               />
               <a href="#">Forgot your password ?</a>
             </div>
           </div>
 
-          <button className="modal__btn" onClick={onLogin}>
+          <button className="modal__btn" onClick={onSubmit}>
             LOGIN &rarr;
           </button>
 
