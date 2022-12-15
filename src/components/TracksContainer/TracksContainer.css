@@ -1,3 +1,35 @@
+.containerTrack{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+.imgTrack{
+	border-radius: 8px;
+	width: 230px;
+	margin-bottom: 20px;
+}
+
+.nameTracks{
+	font-size: 20px;
+	font-weight: bold;
+
+}
+.trackartist{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.genreTrack{
+	font-size: 16px;
+	font-weight: bold;
+}
+.title__suggestion{
+	font-size: 8px;
+	font-weight: bold;
+}
+
 .containerBody {
 	display: flex;
 	justify-content: center;
@@ -81,7 +113,7 @@ section::after {
 }
 
 .trackContainer .trackCard .content .contentBx h3 {
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 500;
@@ -91,11 +123,7 @@ section::after {
 	line-height: 1.1em;
 }
 
-.trackContainer .trackCard .content .contentBx h3 {
-	font-size: 12px;
-	font-weight: 300;
-	text-transform: initial;
-}
+
 
 .trackContainer .trackCard .sci {
 	position: absolute;
@@ -132,6 +160,8 @@ section::after {
 
 .title__suggestion{
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 30px;
 	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-left: 18px;
 }

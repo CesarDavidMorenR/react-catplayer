@@ -30,8 +30,10 @@ const Homepage = (props) => {
       <Menu />
       <PlaylistContainer />
       <AlbumContainer />
-      {/* <TracksContainer/> */}
       <ArtistsContainer />
+      <GenresContainer />
+      {/* <TracksContainer/> */}
+     
     </>
   );
 };

@@ -28,8 +28,7 @@
  transition: .4s ease-in;
  z-index: 1;
  text-decoration: none;
- background-image: linear-gradient(to right top, #d16ba5, #db719b, #e27993, #e6838d,
-  #e88d88, #ed9484, #f19c80, #f4a57d, #fbae75, #feb96d, #fec565, #fbd25f);
+ background-image: linear-gradient(to right top, #b3c4d7, #c4cedf, #d3d9e6, #e2e4ee, #efeff5, #e0e0e7, #d1d1da, #c2c3cc, #9598a8, #687084, #3c4a63, #0b2843);
  /* border: none; */
  
 }
@@ -41,9 +40,11 @@
 
 }
 .Btn-genre:hover{
-    background: #ff96ad;
-    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad,  0 0 50px #ff96ad,  0 0 200px #ff96ad ;
+    background: #5191c1;
+    box-shadow: 0 0 5px #5191c1, 0 0 25px #5191c1,  0 0 50px #5191c1,  0 0 200px #5191c1 ;
 }
 h2{
     margin: 10px;
+    font-weight: bold;
+    margin-top: 40px;
 }
