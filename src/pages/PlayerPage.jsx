@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { FetchTracks } from "../API/FetchTracks";
+import React, { useState } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import useFetchApi from "../API/useFetchApi";
 
 const PlayerPage = () => {
-  const [tracks, setTracks] = useState([]);
-  const urlTrack = "http://localhost:8000/tracks";
-
-  useEffect(() => {
-    const tracks = async () => {
-      const data = await FetchTracks(urlTrack);
-      setTracks(data);
-    };
-    tracks();
-  }, [urlTrack]);
+  const {tracks} = useFetchApi();
 
   //   [
 
@@ -33,11 +24,11 @@ const PlayerPage = () => {
     );
   };
 
-    const handleClickPrevious = () => {
-      setTrackIndex((currentTrack) =>
-        currentTrack < tracks.length - 1 ? currentTrack - 1 : 0
-      );
-    };
+  const handleClickPrevious = () => {
+    setTrackIndex((currentTrack) =>
+      currentTrack < tracks.length - 1 ? currentTrack - 1 : 0
+    );
+  };
 
   const handleEnd = () => {
     setTrackIndex((currentTrack) =>
