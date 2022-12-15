@@ -1,16 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 import "./../Menu/menu.css";
 const Menu = () => {
-
   return (
     <>
-
-
-
-
       <div className="container">
         <Link to="/" className="btn btn-1">
           <svg

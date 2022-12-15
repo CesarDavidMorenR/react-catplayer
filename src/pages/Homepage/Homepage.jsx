@@ -24,7 +24,7 @@ const Homepage = (props) => {
           id="outlined-basic"
           variant="outlined"
           fullWidth
-          label="🔍Search"
+          label="Search"
         />
       </div>
       <PlaylistContainer />
@@ -32,7 +32,6 @@ const Homepage = (props) => {
       <ArtistsContainer />
       <GenresContainer />
       {/* <TracksContainer/> */}
-      <Footer />
     </>
   );
 };
