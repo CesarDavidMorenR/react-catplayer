@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import useFetchApi from "../../API/useFetchApi";
-
+import "./AlbumContainer.css";
 const AlbumContainer = () => {
-  var settings = {
-    dots: true,
+  const settings = {
     centerMode: false,
     infinite: true,
     centerPadding: "30px",
-
-    /* focusOnSelect:true, */
     speed: 500,
-    /*  slidesToShow: 7,
-    slidesToScroll: 4, */
+
     initialSlide: 0,
     responsive: [
       {
@@ -38,8 +33,8 @@ const AlbumContainer = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -49,7 +44,7 @@ const AlbumContainer = () => {
 
   return (
     <>
-      <h1>albums</h1>
+      <h1>Albums</h1>
       <Slider className="status__slider" {...settings}>
         {albums[0]?.map((album) => (
           <div key={album.id} className="status">
@@ -57,8 +52,7 @@ const AlbumContainer = () => {
               <img src={album.imageUrl} alt="" />
             </div>
             <div>
-              <h2>{album.name}</h2>
-              <p>{album.artist}</p>
+              <h2 className="album_name">{album.name}</h2>
             </div>
           </div>
         ))}

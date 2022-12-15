@@ -2,6 +2,44 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+.containerTrack{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+.imgTrack{
+	border-radius: 8px;
+	width: 230px;
+	margin-bottom: 20px;
+}
+
+.nameTracks{
+	font-size: 20px;
+	font-weight: bold;
+
+}
+.trackartist{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.genreTrack{
+	font-size: 16px;
+	font-weight: bold;
+}
+.title__suggestion{
+	font-size: 8px;
+	font-weight: bold;
+}
+
+.containerBody {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	
 
 .containerBody {
   display: flex;
@@ -99,6 +137,17 @@ section::after {
   font-weight: 300;
   text-transform: initial;
 }
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+
 
 .trackContainer .trackCard .sci {
   position: absolute;
@@ -157,4 +206,11 @@ section::after {
   height: 4rem;
   border-radius: 20%;
   box-shadow: 0.1vw 0.8vw 1vw rgba(0, 0, 0, 0.35);
+}
+.title__suggestion{
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-left: 18px;
 }

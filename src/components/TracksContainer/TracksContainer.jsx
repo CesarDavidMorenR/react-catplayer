@@ -98,7 +98,7 @@ const TracksContainer = () => {
               {/* <img src={track.url} alt={track.name} /> */}
               <div className="contentBx">
                 {/*       <h3>{track.name}</h3> */}
-               {/*  <h3 className="trackArtist">{track.artist}</h3> */}
+                {/*  <h3 className="trackArtist">{track.artist}</h3> */}
                 {/* <h3 className="trackGenre">{track.genre}</h3> */}
               </div>
             </div>
@@ -108,12 +108,12 @@ const TracksContainer = () => {
       {/*   listen music--------------------------------------------------------------------------------  */}
       <div className="containerBody">
         <section>
-          <div>
-            <img src={thumbnail} alt="" />
-            <p>{name}</p>
-            <p>{artist}</p>
-            <p>{genre}</p>
-            <div>{{ liked } === false ? "❤" : "😨"}</div>
+          <div className="containerTrack">
+            <img className="imgTrack" src={thumbnail} alt="" />
+            <p className="nameTracks">{name}</p>
+            <p className="trackartist">{artist}</p>
+            <p className="genreTrack">{genre}</p>
+            <div>{{ liked } === false ? "❤" : ""}</div>
 
             <AudioPlayer
               // autoPlay
