@@ -288,6 +288,7 @@
       "last_name": "assambler",
       "email": "jackson@assambler.com",
       "password": "Roxiwell2.0",
+      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set2",
       "id": "4466288a-7983-4513-b15b-60cb773bc965"
     },
     {
@@ -295,6 +296,7 @@
       "last_name": "ackerman",
       "email": "leviAckerman@gmail.com",
       "password": "Roxiwell2.0",
+      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set3",
       "id": "749d59c0-7c05-4063-90a5-731d8054ca81"
     },
     {
@@ -302,6 +304,7 @@
       "username": "mor",
       "email": "cesardavidmor1@gmail.com",
       "password": "123",
+      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set4",
       "discountActivated": false,
       "id": 4
     },
@@ -310,6 +313,7 @@
       "username": "mor",
       "email": "cesardaviddev@gmail.com",
       "password": "123",
+      "profilePicture": "https://robohash.org/suntvoluptasnisi.png?size=50x50&set=set5",
       "discountActivated": false,
       "id": 5
     },

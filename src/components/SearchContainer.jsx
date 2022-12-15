@@ -12,18 +12,16 @@ const SeachContainer = () => {
     console.log(value);
     setSearchParams({ query: value });
   };
-  //const URl= ["localhost1","localhost2"(..)]
   const [search, setSearch] = useState([]);
   const url = "http://localhost:8000/artists";
   useEffect(() => {
     const search = async () => {
       const data = await fetchMusic(url);
       setSearch(data);
-      console.log(data);
+      console.log(search);
     };
     search();
   }, [url]);
-
   return (
     <>
       <input
@@ -33,7 +31,6 @@ const SeachContainer = () => {
         name="filter"
         onChange={handleInput}
       />
-
       <div>
         {search[0]
           ?.filter((artists) => {
@@ -44,6 +41,9 @@ const SeachContainer = () => {
             }
           })
           .map((artist) => (
+            /*   if (artist.name.length === 0) {
+              return: null;
+            } */
             <div className="box" key={artist.id}>
               <img
                 className="artist__image"
