@@ -92,3 +92,4 @@ npm i react-slick
 npm i react-stately
 
 npm install react-bootstrap bootstrap
+npm i react-h5-audio-player
