@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
-import "./Register.css";
+/* import "./Register.css"; */
 
 const Register = () => {
   const {

@@ -1,5 +1,5 @@
 import React from 'react'
-import TracksContainer from '../components/TracksContainer/TracksContainer';
+import TracksContainer from '../../components/TracksContainer/TracksContainer';
 
 
 const GenresPage = () => {

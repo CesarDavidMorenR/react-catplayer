@@ -1,41 +1,58 @@
 import React from "react";
-import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
-import useFetchApi from "../../../API/useFetchApi";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
+import { useAuthContext } from "../../../context/LoginContext";
 
+import useFetchApi from "./../../../API/useFetchApi";
 const Login = () => {
+
+
+  const {login} = useAuthContext();
+
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const { users } = useFetchApi();
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {};
+  const onSubmit = (data) => {
+    const userExist = users.map((user) => {
+      if (user.email === data.email && user.password === data.password) {
+        localStorage.setItem("email", JSON.stringify(user.email));
+        localStorage.setItem("name", JSON.stringify(user.first_name));
+        login();
+        return true;
+      } else {
+        return false;
+      }
+    });
+    if (userExist.includes(true)) {
+      console.log(" You Are Successfully Logged In");
+      navigate("/Homepage");
+    
+    } else {
+      navigate("/");
+      console.log("Email or Password is not matching with our record");
+    }
+  };
 
   return (
     <>
-      <a href="#modal-opened" className="link-1" id="modal-closed">
-        LOGIN
-      </a>
+      <p className="title">Login Form</p>
 
-      <div className="modal-container" id="modal-opened">
-        <div className="modal">
-          <div classNameName="login-card">
-            <div className="login-form">
-              <input type="email" placeholder="Your Email" name="email" />
-              <input
-                type="password"
-                placeholder="Your password"
-                name="password"
-              />
-              <a href="#">Forgot your password ?</a>
-            </div>
-          </div>
-
-          <button className="modal__btn">LOGIN &rarr;</button>
-
-          <a href="#modal-closed" className="link-2"></a>
-        </div>
-      </div>
+      <form className="App" onSubmit={handleSubmit(onSubmit)}>
+        <input type="email" {...register("email", { required: true })} />
+        {errors.email && (
+          <span style={{ color: "red" }}>*Email* is mandatory </span>
+        )}
+        <input type="password" {...register("password")} />
+        <input type={"submit"} style={{ backgroundColor: "#a1eafb" }} />
+      </form>
     </>
   );
 };

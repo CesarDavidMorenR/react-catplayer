@@ -5,19 +5,23 @@ import {
   Route,
 } from "react-router-dom"; /* import Footer from '../components/Footer/Footer' */
 
-import Homepage from "../pages/Homepage";
-import SearchPage from "../pages/SearchPage";
-import LikeSongs from "./../pages/LikeSongs";
-import AccountPage from "./../pages/AccountPage";
-import GenresPage from "../pages/GenresPage";
-import TracksPage from "../pages/TracksPage";
-import LoginPage from "../pages/LoginPage";
+import Homepage from "../pages/Homepage/Homepage";
+import SearchPage from "../pages/SearchPage/SearchPage";
+import LikeSongs from "../pages/LikeSongs/LikeSongs";
+import AccountPage from "../pages/AccountPage/AccountPage";
+import GenresPage from "../pages/GenresPage/GenresPage";
+import TracksPage from "../pages/TracksPage/TracksPage";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import { LoginContext, LoginContextProvider } from "../context/LoginContext";
 
-//TODO LOCAL STORAGE CON COMPROVACION
+
+
 
 const CatPlayer = () => {
+
   return (
     <>
+  <LoginContextProvider>
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
@@ -29,6 +33,7 @@ const CatPlayer = () => {
           <Route path="/TracksPage/:id" element={<TracksPage />} />
         </Routes>
       </Router>
+      </LoginContextProvider>
     </>
   );
 };
