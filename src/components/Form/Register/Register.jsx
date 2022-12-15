@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import { FetchUser } from "../../../API/FetchUser";
+import { FetchUser } from "./../../../API/FetchUser";
 import { FetchCreateUsers } from "../../../API/FetchCreateUsers";
 
 import "./Register.css";

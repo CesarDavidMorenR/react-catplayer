@@ -2,17 +2,20 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
-import PersonIcon from '@mui/icons-material/Person';
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 import './Footer.css'
+
+import { NavLink } from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 /* const Footer = () => { */
 
 
 
 export function Footer(props: SvgIconProps) {
+  const state = useSelector((state)=> state.handlePlaylist)
   return (
     <>
    <div className='houseIcon'>
@@ -22,12 +25,15 @@ export function Footer(props: SvgIconProps) {
      
     </SvgIcon>
 
-    
-      <LibraryMusicIcon sx={{ fontSize: 60 }}/>
+      <NavLink to="/MyPlaylist">
+      <LibraryMusicIcon sx={{ fontSize: 50 }}/>
+      {/* MyPlayList ({state.length}) */}
+      </NavLink>
+      
       {/* <MenuIcon sx={{ fontSize: 60 }}/> */}
       {/* <PersonIcon sx={{ fontSize: 60 }}/> */}
-      <FavoriteIcon sx={{ fontSize: 60 }}/>
-      <SearchIcon sx={{ fontSize: 60 }}/> 
+      <FavoriteIcon sx={{ fontSize: 50 }}/>
+      <SearchIcon sx={{ fontSize: 50 }}/> 
      {/*  <p className='homeText'>Home</p>
         <p className='searchText'>Search</p>
         <p className='LibraryText'>Library</p>
@@ -46,7 +52,7 @@ export default function SvgIconsColor() {
           },
         }}
       >
-        <Footer  sx={{ fontSize: 60 }}/>
+        <Footer  sx={{ fontSize: 50 }}/>
         
        {/*  <p className='homeText'>Home</p>
         <p className='searchText'>Search</p>

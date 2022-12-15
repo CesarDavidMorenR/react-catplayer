@@ -12,6 +12,7 @@ import AccountPage from "./../pages/AccountPage";
 import GenresPage from "../pages/GenresPage";
 import TracksPage from "../pages/TracksPage";
 import LoginPage from "../pages/LoginPage";
+import MyPlayList from "../pages/MyPlayList";
 
 //TODO LOCAL STORAGE CON COMPROVACION
 
@@ -27,6 +28,7 @@ const CatPlayer = () => {
           <Route path="/AccountPage" element={<AccountPage />} />
           <Route path="/GenresPage" element={<GenresPage />} />
           <Route path="/TracksPage/:id" element={<TracksPage />} />
+          <Route path="/MyPlayList" element={<MyPlayList />} />
         </Routes>
       </Router>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./../Menu/Menu.css";
+// import "./../Menu/menu.css";
 const Menu = () => {
   return (
     <>

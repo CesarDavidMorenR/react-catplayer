@@ -92,3 +92,7 @@ npm i react-slick
 npm i react-stately
 
 npm install react-bootstrap bootstrap
+
+
+npm i redux
+npm i react-redux
