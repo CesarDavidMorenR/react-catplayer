@@ -8,7 +8,6 @@ import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer
 /* import TracksContainer from "../components/TracksContainer/TracksContainer"; */
 import { LoginContext } from "../context";
 import Navbar from "../components/Navbar";
-import { InputText } from "primereact/inputtext";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
@@ -38,14 +37,6 @@ const Homepage = () => {
         {search && <Navbar />}
       </div>
       <h5>Left Icon</h5>
-      <span className="p-input-icon-left">
-        <i className="pi pi-search" />
-        <InputText
-          value={value3}
-          onChange={(e) => setValue3(e.target.value)}
-          placeholder="Search"
-        />
-      </span>
 
       <div className="btn">
         <Button variant="contained" className="button_top" onClick={onLogout}>
@@ -57,7 +48,7 @@ const Homepage = () => {
       </p>
       <Link to={"/AccountPage"}>
         <Button variant="text">
-          <img className="profile__img" src="" alt="profile_photo"></img>
+          <img className="profile__img" src="{}" alt="profile_photo"></img>
         </Button>
       </Link>
       <Menu />

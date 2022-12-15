@@ -17,10 +17,13 @@
     "react-aria": "^3.21.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.40.0",
     "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.5",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
-    "react-slick-carousel": "^0.14.9",
     "react-stately": "^3.19.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6"
   },
   "scripts": {
