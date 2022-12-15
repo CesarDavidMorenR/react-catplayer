@@ -14,14 +14,7 @@ const GenresContainer = () => {
         <div>
           <h2>Música por Género</h2>
         </div>
-        <div className="Btn_container">
-          {genres.map((genre) => (
-            <div key={genre.id}>
-              <button className="Btn-genre">
-                <p className="GenreName">{genre.name}</p>
-              </button>
-            </div>
-          ))}
+     
           <div className="Btn_container">
             {genres.map((genre) => (
               <div key={genre.id}>
@@ -32,7 +25,7 @@ const GenresContainer = () => {
             ))}
           </div>
         </div>
-      </div>
+     
     </>
   );
 };

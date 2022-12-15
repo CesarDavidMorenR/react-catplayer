@@ -4,7 +4,7 @@ import "react-h5-audio-player/lib/styles.css";
 import useFetchApi from "../../API/useFetchApi";
 import { Link } from "react-router-dom";
 import  './TracksContainer.css'
-import Slider from "react-slick";
+
 
 const TracksContainer = () => {
 
