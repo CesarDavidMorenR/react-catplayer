@@ -3,8 +3,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	background: #161616;
-	min-height: 100vh;
+	
+
 }
 
 section::before {
@@ -128,4 +128,10 @@ section::after {
     right: -80px;
     position: relative;
     margin-top: 40px;
+}
+
+.title__suggestion{
+	font-weight: bold;
+	font-size: 50px;
+	margin-bottom: 20px;
 }
