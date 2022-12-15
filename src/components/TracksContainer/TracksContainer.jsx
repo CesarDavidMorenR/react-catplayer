@@ -4,7 +4,11 @@ import "react-h5-audio-player/lib/styles.css";
 import useFetchApi from "../../API/useFetchApi";
 import { Link } from "react-router-dom";
 import  './TracksContainer.css'
+import Slider from "react-slick";
+
 const TracksContainer = () => {
+
+
   const { tracks } = useFetchApi();
 
 
@@ -44,12 +48,12 @@ const TracksContainer = () => {
     <>
       <div className="containerBody">
         <section>
-          <div>
-            <img src={thumbnail} alt="" />
-            <p>{name}</p>
-            <p>{artist}</p>
-            <p>{genre}</p>
-            <div>{{ liked } === false ? "❤" : "😨"}</div>
+          <div className="containerTrack">
+            <img className="imgTrack" src={thumbnail} alt="" />
+            <p className="nameTracks">{name}</p>
+            <p className="trackartist">{artist}</p>
+            <p className="genreTrack">{genre}</p>
+            <div>{{ liked } === false ? "❤" : ""}</div>
 
             <AudioPlayer
               // autoPlay
@@ -63,7 +67,11 @@ const TracksContainer = () => {
               onEnded={handleEnd}
             />
           </div>
+          
+          
           <h1 className="title__suggestion">Suggestions You May Like</h1>
+          
+        
           <div className="trackContainer">
             {tracks
               .sort(() => Math.random() - 0.5)
@@ -95,8 +103,12 @@ const TracksContainer = () => {
                     </li>
                   </ul>
                 </div>
+               
               ))}
+            
           </div>
+     
+         
         </section>
       </div>
     </>
