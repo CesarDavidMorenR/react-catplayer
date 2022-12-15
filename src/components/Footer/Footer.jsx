@@ -27,7 +27,6 @@ export function Footer(props: SvgIconProps) {
 
       <NavLink to="/MyPlaylist">
       <LibraryMusicIcon sx={{ fontSize: 50 }}/>
-      {/* MyPlayList ({state.length}) */}
       </NavLink>
       
       {/* <MenuIcon sx={{ fontSize: 60 }}/> */}
