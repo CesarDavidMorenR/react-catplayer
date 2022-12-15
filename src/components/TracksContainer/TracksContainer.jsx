@@ -34,7 +34,7 @@ const TracksContainer = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          initialSlide: 2,
+          initialSlide: 3,
         },
       },
       {
@@ -83,7 +83,7 @@ const TracksContainer = () => {
 
   return (
     <>
-      <h5 className="title__suggestion">Suggestions You May Like </h5>
+   {/*    <h5 className="title__suggestion">Suggestions You May Like </h5> */}
       <Slider className="status__slider__tracks" {...settings}>
         {tracks
           .sort(() => Math.random() - 0.5)
