@@ -3,11 +3,11 @@ import AlbumContainer from '../components/AlbumsContainer/AlbumsContainer'
 import ArtistsContainer from '../components/ArtistContainer/ArtistsContainer'
 import GenresContainer from '../components/GenresContainer/GenresContainer'
 import TracksContainer from '../components/TracksContainer/TracksContainer'
-/* import Footer from './../components/Footer/Footer' */
+import Footer from './../components/Footer/Footer'
 import '../components/home/Home.css'
 import { useContext } from "react";
 import { useNavigate } from "react-router";
-import Menu from "../components/Menu/Menu";
+/* import Menu from "../components/Menu/Menu"; */
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
 /* import TracksContainer from "../components/TracksContainer/TracksContainer"; */
 import { LoginContext } from "../context";
@@ -30,7 +30,7 @@ const Homepage = () => {
   return (
     <>
      <header>
-      <img className='logo' src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670922661/catplayer_logo_iggwv1.png" alt="cat player"/>
+      <img className='logo' src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670950770/Mi_proyecto_1_ikdpct.png" alt="cat player"/>
     </header>
     <h1>HomePage</h1>
     <PlaylistContainer/>
@@ -50,7 +50,7 @@ const Homepage = () => {
 
       <h1>WELCOME USER</h1>
       <SearchContainer />
-      <Menu />
+      {/* <Menu /> */}
 
       <PlaylistContainer />
       <AlbumContainer />
@@ -58,7 +58,7 @@ const Homepage = () => {
       <ArtistsContainer />
 
       <GenresContainer />
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 };
