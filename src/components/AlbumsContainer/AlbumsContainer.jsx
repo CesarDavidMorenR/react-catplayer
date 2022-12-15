@@ -5,8 +5,6 @@ import "slick-carousel/slick/slick.css";
 import useFetchApi from "../../API/useFetchApi";
 
 const AlbumContainer = () => {
-
-
   var settings = {
     dots: true,
     centerMode: false,
@@ -47,32 +45,23 @@ const AlbumContainer = () => {
     ],
   };
 
-
-
-
-
-
-
-  const {albums} = useFetchApi();
- 
-
-  
+  const { albums } = useFetchApi();
 
   return (
     <>
-    <h1>albums</h1>
-    <Slider className="status__slider" {...settings}>
-      {albums[0]?.map((album) => (
-        <div key={album.id} className="status">
-          <div className="status__avatar">
-          <img src={album.imageUrl} alt="" />
+      <h1>albums</h1>
+      <Slider className="status__slider" {...settings}>
+        {albums[0]?.map((album) => (
+          <div key={album.id} className="status">
+            <div className="status__avatar">
+              <img src={album.imageUrl} alt="" />
+            </div>
+            <div>
+              <h2>{album.name}</h2>
+              <p>{album.artist}</p>
+            </div>
           </div>
-          <div>
-          <h2>{album.name}</h2> 
-         <p>{album.artist}</p> 
-         </div>
-        </div>
-      ))}
+        ))}
       </Slider>
     </>
   );

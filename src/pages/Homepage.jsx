@@ -1,32 +1,25 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router";
-import AlbumContainer from "../components/AlbumsContainer/AlbumsContainer";
-import ArtistsContainer from "../components/ArtistContainer/ArtistsContainer";
-import GenresContainer from "../components/GenresContainer/GenresContainer";
+import React from 'react'
+import AlbumContainer from '../components/AlbumsContainer/AlbumsContainer'
+import ArtistsContainer from '../components/ArtistContainer/ArtistsContainer'
+import GenresContainer from '../components/GenresContainer/GenresContainer'
+import TracksContainer from '../components/TracksContainer/TracksContainer'
+
+import '../components/home/Home.css'
+
 import Menu from "../components/Menu/Menu";
 import PlaylistContainer from "../components/PlaylistContainer/PlaylistContainer";
-import TracksContainer from "../components/TracksContainer/TracksContainer";
-import { useLoginContext } from "../context/LoginContext";
 
 
-const Homepage = (props) => {
-const {isAuthenticated} = useLoginContext()
-const user = JSON.parse(localStorage.getItem("user"));
+const Homepage = () => {
+
 
 
   return (
     <>
-    <div>
-    {isAuthenticated ? (
-          <div>
-            <span>Hi, {user}</span>
-          </div>
-        ) : null}
-      </div>
-
-
+    
 
       <h1>WELCOME USER</h1>
+     
       <Menu />
 
       <PlaylistContainer />
@@ -34,7 +27,7 @@ const user = JSON.parse(localStorage.getItem("user"));
       {/* <TracksContainer/> */}
       <ArtistsContainer />
 
-      <GenresContainer />
+ 
     </>
   );
 };
