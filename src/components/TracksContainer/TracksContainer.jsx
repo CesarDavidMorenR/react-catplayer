@@ -4,6 +4,7 @@ import "react-h5-audio-player/lib/styles.css";
 import useFetchApi from "../../API/useFetchApi";
 import { Link } from "react-router-dom";
 import  './TracksContainer.css'
+import { className } from "react-slick-carousel/lib/default-props";
 
 
 const TracksContainer = () => {
@@ -58,7 +59,7 @@ const TracksContainer = () => {
             <AudioPlayer
               // autoPlay
               src={playlist}
-              onPlay={(e) => console.log("onPlay")}
+              onPlay={(e) => console.log("onPlay") }
               // other props here
               showSkipControls={true}
               showJumpControls={true}
@@ -96,10 +97,11 @@ const TracksContainer = () => {
                       <Link className="a">
                         <img
                           className="player"
-                          src="https://images-ext-2.discordapp.net/external/0zooWSAlCB1KQo72aiLpIp-S1W8TmO10CRbcnVA1A-k/https/cdn-icons-png.flaticon.com/512/295/295129.png"
+                          src="https://res.cloudinary.com/dj376be4v/image/upload/v1671140283/295129_w8ng1h.png"
                           alt="error"
                         />
                       </Link>
+
                     </li>
                   </ul>
                 </div>

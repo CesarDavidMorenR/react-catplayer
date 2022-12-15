@@ -156,6 +156,7 @@ section::after {
     right: -80px;
     position: relative;
     margin-top: 40px;
+	
 }
 
 .title__suggestion{
@@ -165,3 +166,4 @@ section::after {
 	margin-top: 50px;
 	margin-left: 18px;
 }
+
