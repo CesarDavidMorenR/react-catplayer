@@ -4,7 +4,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { Link } from "react-router-dom";
 import useFetchApi from "../../API/useFetchApi";
+import { useCart } from "react-use-cart";
+
 const PlaylistContainer = () => {
+  const {AddToSong} = useCart(); 
+
+
+
   const settings = {
     centerMode: false,
     infinite: true,
@@ -44,6 +50,7 @@ const PlaylistContainer = () => {
 
   const { playlist } = useFetchApi();
 
+
   return (
     <>
       <h1>Playlist</h1>
@@ -55,12 +62,14 @@ const PlaylistContainer = () => {
                 <img src={playlist.thumbnail} alt={playlist.name} />
               </div>
             </Link>
+           
             <div>
               <h2 className="playlist_name">{playlist.name}</h2>
               <p>{playlist.isFollowed}</p>
               <p>{playlist.publicAccessible}</p>
               {/*    <p>{playlist.primaryColor}</p> */}
             </div>
+            <button className="button_add">Add to cart</button>
           </div>
         ))}
       </Slider>
