@@ -2,7 +2,7 @@ import React from "react";
 
 import Login from "../../components/Form/Login/Login";
 import Register from "../../components/Form/Register/Register";
-
+import background from "./gato-logo.png";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -32,6 +32,7 @@ const LoginPage = () => {
             ></path>
           </svg>
         </div>
+        <img src={background} alt="logo" />
         <div className="forms">
           <Register />
           <Login />
