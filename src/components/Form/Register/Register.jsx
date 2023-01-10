@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import { FetchUser } from "../../../API/FetchUser";
-import { FetchCreateUsers } from "../../../API/FetchCreateUsers";
 
 import "./Register.css";
 
@@ -28,7 +26,7 @@ const Register = () => {
 
   useEffect(() => {
     const connection = async () => {
-      const data = await FetchUser(url);
+      const data = await url;
       setUsers(data);
       /*  console.log(data); */
     };
@@ -49,7 +47,6 @@ const Register = () => {
       console.log("user exist");
       navigate("/");
     } else {
-      FetchCreateUsers(form);
       navigate("/");
       console.log("user not exist");
     }
@@ -70,60 +67,70 @@ const Register = () => {
           <div classNameName="login-card-register">
             <div className="login-form-register">
               <form onSubmit={handleSubmit(onSubmit)}>
-                <input
-                  {...register("first_name", {
-                    required: "username is required",
-                    minLength: {
-                      value: 5,
-                      message: "username must be 3 characters long",
-                    },
-                    maxLength: {
-                      value: 10,
-                      message: "username must be 10 characters long",
-                    },
-                  })}
-                  placeholder="First name"
-                  type="text"
-                />
+                <div className="textbox">
+                  <input
+                    {...register("first_name", {
+                      required: "username is required",
+                      minLength: {
+                        value: 5,
+                        message: "username must be 3 characters long",
+                      },
+                      maxLength: {
+                        value: 10,
+                        message: "username must be 10 characters long",
+                      },
+                    })}
+                    placeholder="First name"
+                    type="text"
+                  />
+                </div>
                 <p className="error_message">{errors.firstName?.message}</p>
-
-                <input
-                  {...register("last_name", {
-                    required: "lastname is required",
-                  })}
-                  placeholder="Last name"
-                  type="text"
-                />
+                <br />
+                <div className="textbox">
+                  <input
+                    {...register("last_name", {
+                      required: "lastname is required",
+                    })}
+                    placeholder="Last name"
+                    type="text"
+                  />
+                </div>
                 <p className="error_message">{errors.lastName?.message}</p>
-
-                <input
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value:
-                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                      message: "Email must be valid",
-                    },
-                  })}
-                  placeholder="email"
-                  type="email"
-                />
+                <br />
+                <div className="textbox">
+                  <input
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value:
+                          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                        message: "Email must be valid",
+                      },
+                    })}
+                    placeholder="email"
+                    type="email"
+                  />
+              
+                </div>
                 <p className="error_message">{errors.email?.message}</p>
-                <input
-                  {...register("password", {
-                    required: "password is required",
-                    pattern: {
-                      value:
-                        /^(?=.*[0-9])(?=.*[!@#$%^&*.,])[a-zA-Z0-9!@#$%^&*.,]{6,16}$/,
-                      message:
-                        "password must contain 6 characters , one uppercase,one lowercase,one number and one special character",
-                    },
-                  })}
-                  placeholder="password"
-                  type="password"
-                />
+                <br />
+                <div className="textbox">
+                  <input
+                    {...register("password", {
+                      required: "password is required",
+                      pattern: {
+                        value:
+                          /^(?=.*[0-9])(?=.*[!@#$%^&*.,])[a-zA-Z0-9!@#$%^&*.,]{6,16}$/,
+                        message:
+                          "password must contain 6 characters , one uppercase,one lowercase,one number and one special character",
+                      },
+                    })}
+                    placeholder="password"
+                    type="password"
+                  />
+                </div>
                 <p className="error_message">{errors.password?.message}</p>
-
+                <br />
                 <input type="submit" value="REGISTER" className="modal__btn" />
               </form>
             </div>

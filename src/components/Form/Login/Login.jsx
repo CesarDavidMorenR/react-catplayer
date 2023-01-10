@@ -1,114 +1,80 @@
-import React, { useContext, useReducer, useState, useEffect } from "react";
+import React from "react";
 
-import { FetchUser } from "../../../API/FetchUser";
-import { LoginContext, LoginReducer } from "../../../context";
-import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
+import { useAuthContext } from "../../../context/LoginContext";
 
+import useFetchApi from "./../../../API/useFetchApi";
 import "./Login.css";
-
-const initialLogin = {
-  email: "",
-  password: "",
-  isLoading: false,
-  error: "",
-  isLoggedIn: false,
-};
-
 const Login = () => {
-  const { login } = useContext(LoginContext);
-  console.log(login);
+  const { login } = useAuthContext();
 
-  const [state, dispatch] = useReducer(LoginReducer, initialLogin);
-  const { email, password, isLoading, error, isLoggedIn } = state;
-  const [users, setUsers] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const url = "http://localhost:8000/user";
-
-  useEffect(() => {
-    const connection = async () => {
-      const data = await FetchUser(url);
-      setUsers(data);
-    };
-    connection();
-  }, [url]);
+  const { users } = useFetchApi();
 
   const navigate = useNavigate();
 
-  const onLogin = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     const userExist = users.map((user) => {
-      if (user.email === state.email) {
+      if (user.email === data.email && user.password === data.password) {
+        localStorage.setItem("email", JSON.stringify(user.email));
+        localStorage.setItem("name", JSON.stringify(user.first_name));
+        login();
         return true;
       } else {
         return false;
       }
     });
     if (userExist.includes(true)) {
-      navigate("/HomePage");
-      console.log("successfully");
+      console.log(" You Are Successfully Logged In");
+      navigate("/Homepage");
     } else {
       navigate("/");
-      console.log("unsuccessful");
+      console.log("Email or Password is not matching with our record");
     }
   };
 
   return (
     <>
-     {/* <header>
-      <img className="imgCat" src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670922661/catplayer_logo_iggwv1.png" alt="cat player"/>
-    </header> */}
-    {/* DARK OPTION */}
-    <header><h1>REACT 
-        CATPLAYER
-      </h1>
-
-      <img className="imgCat" src="https://res.cloudinary.com/dcfivdjx9/image/upload/v1670950770/Mi_proyecto_1_ikdpct.png" alt="cat player"/>
-      
-      
-    
-    </header>
-    
       <a href="#modal-opened" className="link-1" id="modal-closed">
         LOGIN
       </a>
-     
+
       <div className="modal-container" id="modal-opened">
         <div className="modal">
           <div classNameName="login-card">
             <div className="login-form">
-              <input
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                value={email}
-                onChange={(e) =>
-                  dispatch({
-                    type: "field",
-                    field: "email",
-                    value: e.target.value,
-                  })
-                }
-              />
-              <input
-                type="password"
-                placeholder="Your password"
-                name="password"
-                value={password}
-                onChange={(e) =>
-                  dispatch({
-                    type: "field",
-                    field: "password",
-                    value: e.target.value,
-                  })
-                }
-              />
-              <a href="#">Forgot your password ?</a>
+              <form className="App" onSubmit={handleSubmit(onSubmit)}>
+                <div className="textbox">
+                
+                <input
+                  type="email"
+                  {...register("email", { required: true })}
+                  placeholder="enter your email"
+                />
+                {errors.email && (
+                  <span style={{ color: "red" }}>*Email* is obligatory </span>
+                )}
+                </div>
+                    <br />
+               
+                <div className="textbox">
+                <input
+                  type="password"
+                  {...register("password")}
+                  placeholder="enter your password"
+                />
+                </div>
+              <br />
+                <input type={"submit"} value="LOGIN" className="modal__btn" />
+              </form>
             </div>
           </div>
-
-          <button className="modal__btn" onClick={onLogin}>
-            LOGIN &rarr;
-          </button>
 
           <a href="#modal-closed" className="link-2"></a>
         </div>

@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
-import { fetchMusic } from "../../API/FetchMusic";
-import "./AlbumsContainer.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-
+import useFetchApi from "../../API/useFetchApi";
+import "./AlbumContainer.css";
 const AlbumContainer = () => {
   const settings = {
     centerMode: false,
     infinite: true,
-    centerPadding: "80px",
-
-    /* focusOnSelect:true, */
+    centerPadding: "30px",
     speed: 500,
-    /*  slidesToShow: 7,
-    slidesToScroll: 4, */
+
     initialSlide: 0,
     responsive: [
       {
@@ -37,23 +32,15 @@ const AlbumContainer = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
   };
 
-  const [albums, setAlbums] = useState([]);
-  const url = "http://localhost:8000/albums";
+  const { albums } = useFetchApi();
 
-  useEffect(() => {
-    const connection = async () => {
-      const data = await fetchMusic(url);
-      setAlbums(data);
-    };
-    connection();
-  }, [url]);
   return (
     <>
       <h1>Albums</h1>
@@ -64,8 +51,7 @@ const AlbumContainer = () => {
               <img className="albums__image" src={album.imageUrl} alt="" />
             </div>
             <div>
-              <h2>{album.name}</h2>
-              {/* <p>{album.artist}</p> */}
+              <h2 className="album_name">{album.name}</h2>
             </div>
           </div>
         ))}
